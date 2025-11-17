@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Studio Moderne | Hôtel Glodi VIP</title>
+  <meta name="description" content="Appartement VIP à Kisangani — luxe, confort et sécurité. Hôtel Glodi VIP." />
+  
+  <!-- Tailwind + Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="/apparts/Capture d’écran 2025-11-10 001341.png">
+  <link rel="stylesheet" href="css/galerie.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            primary: {
+              50:'#fbf8f4',100:'#f6efe8',200:'#efe0d1',300:'#e6ccb5',400:'#dcb99b',500:'#d0a581',600:'#b7886a',700:'#926b55',800:'#6f5242',900:'#4e3a30'
+            },
+            accent: '#fbbf24'
+          },
+          boxShadow: { soft: '0 12px 36px -12px rgba(0,0,0,.18)' }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-slate-800 dark:text-white font-sans">
+
+  <!-- Header minimal cohérent -->
+  <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-700 shadow-soft">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-3">
+          <!-- Logo SVG: cercle avec initiales HGV -->
+          <svg class="h-10 w-10 rounded-full ring-2 ring-primary-300 dark:ring-gray-600 shadow-sm" viewBox="0 0 64 64" role="img" aria-labelledby="logoTitle logoDesc" xmlns="http://www.w3.org/2000/svg">
+            <title id="logoTitle">Logo HGV — Glodi VIP</title>
+            <desc id="logoDesc">Cercle doré avec les initiales H G V</desc>
+            <defs>
+              <linearGradient id="g_grad" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0%" stop-color="#FFD84D"/>
+          <stop offset="50%" stop-color="#F7B538"/>
+          <stop offset="100%" stop-color="#D18A2F"/>
+              </linearGradient>
+              <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.12"/>
+              </filter>
+            </defs>
+
+            <!-- Cercle de fond -->
+            <circle cx="32" cy="32" r="30" fill="url(#g_grad)" filter="url(#soft)"/>
+
+            <!-- Initiales HGV -->
+            <g fill="#fff" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial" font-weight="700" text-anchor="middle">
+              <text x="32" y="30.5" font-size="18">H</text>
+              <text x="32" y="46.5" font-size="18">G V</text>
+            </g>
+          </svg>
+
+          <span class="font-extrabold tracking-tight text-xl text-primary-900 dark:text-white" data-i18n="brand">Hôtel Glodi VIP</span>
+        </a>
+      <a href="../index.html#appartements" class="px-4 py-2 rounded-lg bg-primary-700 text-white hover:bg-primary-800 transition">← Retour</a>
+    </div>
+  </header>
+
+  <!-- Contenu -->
+  <main class="max-w-6xl mx-auto px-4 py-12 space-y-12">
+
+    <!-- Galerie avec fondu 
+    <div class="relative h-96 overflow-hidden rounded-3xl shadow-soft">
+      <img src="../images/appart1.jpg" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000 slide">
+      <img src="../images/appart1b.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 slide">
+      <img src="../images/appart1c.jpg" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 slide">
+    </div> -->
+        <!--Galerie pour remplacer le Mini panneau publicitaire-->
+    <div id="wrapper" class="wrapper" data-anim="zoom-in">
+        <div class="conteiner">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card" style="background-image: url('../apparts/lit.jpg');">
+                <div class="row">
+                    <div class="icon">HGV</div>
+                    <div class="description">
+                        <h4>chambres climatisées</h4>
+                        <p></p>
+                    </div>
+                </div>
+            </label>
+            
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="card" style="background-image: url('../apparts/tvmoderne.jpg');"> 
+                <div class="row">
+                    <div class="icon">HGV</div>
+                    <div class="description">
+                        <h4>Salon avec smart TV</h4>
+                        <p></p>
+                    </div>
+                </div>
+            </label>
+
+            <input type="radio" name="slide" id="c3">
+            <label for="c3" class="card" style="background-image: url('../apparts/cui.jpg');">
+               <div class="row">
+                    <div class="icon">HGV</div>
+                    <div class="description">
+                        <h4>Cuisine équipée complète</h4>
+                        <p></p>
+                    </div>
+               </div>
+            </label>
+
+            <input type="radio" name="slide" id="c4">
+            <label for="c4" class="card" style="background-image: url('../apparts/panora.jpg');">
+                <div class="row">
+                    <div class="icon">HGV</div>
+                    <div class="description">
+                        <h4>Balcon avec vue sur la ville</h4>
+                        <p></p>
+                    </div>
+                </div>
+            </label>
+
+            <input type="radio" name="slide" id="c5">
+            <label for="c5" class="card" style="background-image: url('../apparts/bureauvip.jpg');">
+                <div class="row">
+                    <div class="icon">HGV</div>
+                    <div class="description">
+                        <h4>Espace bureau</h4>
+                        <p></p>
+                    </div>
+                </div>
+            </label>
+
+            <input type="radio" name="slide" id="c6">
+            <label for="c6" class="card" style="background-image: url('../apparts/studiodouche.jpg');">
+                <div class="row">
+                    <div class="icon">HGV</div>
+                    <div class="description">
+                        <h4>Douche moderne</h4>
+                        <p></p>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </div>
+    <!-- Vidéo 
+    <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-soft p-6">
+      <h2 class="text-2xl font-bold mb-4 gold-title">Vidéo de présentation</h2>
+      <video controls class="w-full rounded-xl shadow-lg">
+        <source src="../videos/appart1.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+    </section>-->
+
+    <!-- Description -->
+    <section class="bg-white dark:bg-slate-800 rounded-2xl shadow-soft p-6 space-y-4">
+      <h2 class="text-3xl font-extrabold gold-title">Studio Urbain</h2>
+      <p class="text-slate-600 dark:text-slate-300">
+        Découvrez un espace luxueux et moderne à Kisangani : 2 chambres, salon moderne, balcon privé et connexion Wi-Fi haut débit.
+      </p>
+      <ul class="list-disc list-inside text-slate-600 dark:text-slate-300 space-y-1">
+        <li>2 chambres climatisées</li>
+        <li>Salon avec Smart TV</li>
+        <li>Cuisine équipée complète</li>
+        <li>Balcon avec vue sur la ville</li>
+        <li>Espace bureau </li>
+        <li>Sécurité 24h/24</li>
+      </ul>
+
+      <div class="flex items-center justify-between mt-6">
+        <span class="font-semibold text-yellow-500">100 $/nuit — 1000 $/mois</span>
+        <div class="flex gap-3">
+          <a href="../index.html#contact" class="px-4 py-2 rounded-lg bg-yellow-500 text-black hover:bg-yellow-400 font-semibold">Réserver</a>
+          <a href="https://wa.me/243824322239?text=Bonjour,%20je%20souhaite%20réserver%20l’Appartement%20VIP."
+             target="_blank"
+             class="px-4 py-2 rounded-lg bg-green-600 text-white hover:bg-green-500 font-semibold">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer amélioré -->
+<footer class="relative overflow-hidden bg-primary-900 dark:bg-black text-primary-50 dark:text-slate-300 transition-colors">
+  
+  <!-- Effet lumineux doré subtil -->
+  <div class="absolute inset-0 bg-gradient-to-r from-yellow-500/10 via-yellow-300/5 to-transparent opacity-20 animate-pulse"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8 z-10">
+    
+    <!-- Colonne 1 : Identité -->
+    <div>
+      <h4 class="font-bold text-lg gold-title" data-i18n="brand">Hôtel Glodi VIP</h4>
+      <p class="text-primary-100 dark:text-slate-400 mt-2" data-i18n="foot_tag">
+        Séjours d’exception à Kisangani.
+      </p>
+    </div>
+
+    <!-- Colonne 2 : Coordonnées -->
+    <div>
+      <h5 class="font-semibold mb-2" data-i18n="foot_contacts">Coordonnées</h5>
+      <ul class="space-y-1 text-primary-100 dark:text-slate-400">
+        <li data-i18n="foot_addr"><svg class="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg> Avenue des Palmiers 12, Kisangani</li>
+        <li><svg class="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg> +243 82 43 22 239</li>
+        <li><svg class="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> reservation@glodivip.com</li>
+      </ul>
+    </div>
+
+    <!-- Colonne 3 : Navigation -->
+    <div>
+      <h5 class="font-semibold mb-2" data-i18n="foot_nav">Navigation</h5>
+      <ul class="space-y-1 text-primary-100 dark:text-slate-400">
+        <li><a href="/index.html#chambres" class="hover:text-yellow-400 transition" data-i18n="nav_rooms">Chambres</a></li>
+        <li><a href="/index.html#restaurant" class="hover:text-yellow-400 transition" data-i18n="nav_restaurant">Restaurant</a></li>
+       <!--<li><a href="#spa" class="hover:text-yellow-400 transition" data-i18n="nav_spa">Spa</a></li>-->
+        <li><a href="/index.html#galerie" class="hover:text-yellow-400 transition" data-i18n="nav_gallery">Galerie</a></li>
+      </ul>
+    </div>
+
+    <!-- Colonne 4 : Newsletter -->
+    <div>
+      <h5 class="font-semibold mb-2" data-i18n="foot_news">Newsletter</h5>
+      <form 
+        class="mt-2 flex gap-2" 
+        onsubmit="event.preventDefault(); alert(currentLang==='fr'?'Merci pour votre inscription !':'Thanks for subscribing!'); this.reset();">
+        <input 
+          type="email" 
+          required 
+          class="flex-1 rounded-xl px-3 py-2 border border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-400 text-slate-900 placeholder:text-slate-400"
+          placeholder="Votre email" 
+          data-i18n-ph="news_email">
+        <button 
+          class="px-4 py-2 rounded-xl bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition-shadow shadow-soft hover:shadow-lg" 
+          data-i18n="news_ok">
+          OK
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Ligne inférieure -->
+  <div class="relative border-t border-white/10 dark:border-slate-700">
+    <div class="max-w-7xl mx-auto px-4 py-4 text-sm text-primary-200 dark:text-slate-400 flex flex-col md:flex-row items-center justify-between gap-2">
+      <span>
+        © <span id="year"></span> Glodi VIP. 
+        <span data-i18n="rights">Tous droits réservés.</span>
+        <span data-i18n="">Design By <a href="https://portfoliodavidwawina.vercel.app" target="_blank">David Wawina Dev</a></span>
+      </span>
+      <a href="#contact" class="hover:text-yellow-400 transition" data-i18n="best_rate">Meilleur tarif garanti</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Animation subtile pour l’effet doré du footer */
+  @keyframes shine-footer {
+    0%,100% {opacity: .3;}
+    50% {opacity: .7;}
+  }
+  footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255,215,0,0.5), transparent);
+    animation: shine-footer 4s linear infinite;
+  }
+</style>
+
+<script>
+  // Affiche l’année automatique
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let i = 0;
+    setInterval(() => {
+      slides[i].classList.replace('opacity-100', 'opacity-0');
+      i = (i + 1) % slides.length;
+      slides[i].classList.replace('opacity-0', 'opacity-100');
+    }, 4000);
+  </script>
+</body>
+</html>

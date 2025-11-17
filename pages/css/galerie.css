@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #fdfdff;
+}
+.wrapper{
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner{
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+}
+.card{
+    width: 80px;
+    border-radius: 2rem;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03,0,0.99);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+}
+
+.card .row{
+    color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+input:checked + label{
+    width: 600px;
+}
+.icon{
+    background-color: #ad723f;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    flex-shrink: 0;
+}
+/* Ne masquer que les inputs radio utilisés par la galerie */
+.conteiner input[type="radio"]{
+    display: none;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+input:checked + label .description{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+input:checked + label .row{
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 2rem 2rem;
+    width: 100%;
+}
+h4{
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .conteiner {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    .card {
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        margin: 10px 0;
+    }
+    input:checked + label {
+        height: 300px;
+        width: 100%;
+        max-width: 400px;
+    }
+    .description {
+        width: calc(100% - 80px);
+    }
+}
+
+/*Optimisation de la page de formation*/
+main{
+    margin: 10%;
+    padding: 10px;
+    margin-top: -100px;
+}

@@ -1,0 +1,10 @@
+# robots.txt pour Glodi VIP — modifiez les règles et l'URL du sitemap selon vos besoins
+User-agent: *
+Disallow: /private/
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /cgi-bin/
+Crawl-delay: 10
+
+# Remplacez par l'URL réelle de votre sitemap
+Sitemap: https://www.glodi-vip.com/sitemap.xml

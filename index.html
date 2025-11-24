@@ -1252,36 +1252,142 @@
 
 
 
-  <!-- Contact -->
-  <section id="contact" class="bg-white dark:bg-gray-900 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 py-16">
-      <div class="grid md:grid-cols-2 gap-8 items-start">
-        <div class="fade-up">
-          <h2 class="text-3xl md:text-4xl font-extrabold" data-i18n="contact_title">Contact & Accès</h2>
-          <p class="text-slate-600 dark:text-slate-400 mt-2" data-i18n="contact_sub">Notre équipe vous répond 24/7.</p>
-          <form class="mt-6 grid grid-cols-1 gap-3" onsubmit="event.preventDefault(); alert(currentLang==='fr'?'Merci, votre message a été envoyé !':'Thanks, your message has been sent!'); this.reset();">
-            <input type="text" required class="rounded-xl px-3 py-2 border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-accent" placeholder="Votre nom" data-i18n-ph="contact_name">
-            <input type="email" required class="rounded-xl px-3 py-2 border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-accent" placeholder="Email" data-i18n-ph="contact_email">
-            <input type="tel" class="rounded-xl px-3 py-2 border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-accent" placeholder="Téléphone" data-i18n-ph="contact_phone">
-            <textarea rows="4" required class="rounded-xl px-3 py-2 border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-accent" placeholder="Votre message" data-i18n-ph="contact_msg"></textarea>
-            <button class="px-4 py-2 rounded-xl bg-primary-700 text-white hover:bg-primary-800 dark:bg-accent dark:hover:bg-yellow-500 shadow-soft" data-i18n="contact_btn">Envoyer</button>
-          </form>
+<!-- Contact & Formulaire Web3Forms -->
+<section id="contact" class="bg-white dark:bg-gray-900 transition-colors">
+  <div class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div class="fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white" data-i18n="contact_title">Contact & Accès</h2>
+        <p class="text-slate-600 dark:text-slate-400 mt-2 mb-6" data-i18n="contact_sub">Notre équipe vous répond 24/7.</p>
+        
+        <!-- Formulaire Web3Forms -->
+        <!-- J'ai ajouté l'ID 'contact-form' et la fonction onsubmit -->
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="mt-6 grid grid-cols-1 gap-3">
+          
+          <!-- Clé Web3Forms MASQUÉE (bfa99740-06cb-45d6-8583-201a7b0d8236) -->
+          <input type="hidden" name="access_key" value="bfa99740-06cb-45d6-8583-201a7b0d8236">
+          <!-- Empêche d'envoyer un email vide si JavaScript est désactivé -->
+          <input type="hidden" name="botcheck" value=""> 
+
+          <!-- Champ Nom -->
+          <input type="text" name="Nom" required class="rounded-xl px-3 py-2 border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-accent placeholder-slate-400 dark:placeholder-slate-500" placeholder="Votre nom" data-i18n-ph="contact_name">
+          
+          <!-- Champ Email -->
+          <input type="email" name="Email" required class="rounded-xl px-3 py-2 border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-accent placeholder-slate-400 dark:placeholder-slate-500" placeholder="Email" data-i18n-ph="contact_email">
+          
+          <!-- Champ Téléphone -->
+          <input type="tel" name="Téléphone" class="rounded-xl px-3 py-2 border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-accent placeholder-slate-400 dark:placeholder-slate-500" placeholder="Téléphone" data-i18n-ph="contact_phone">
+          
+          <!-- Champ Message -->
+          <textarea name="Message" rows="4" required class="rounded-xl px-3 py-2 border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:focus:ring-accent placeholder-slate-400 dark:placeholder-slate-500" placeholder="Votre message" data-i18n-ph="contact_msg"></textarea>
+          
+          <!-- Conteneur de message (caché par défaut) -->
+          <div id="message-box" class="px-3 py-2 text-center text-sm font-medium transition-all duration-300 opacity-0 h-0 overflow-hidden rounded-xl"></div>
+          
+          <!-- Bouton d'envoi -->
+          <button id="submit-button" type="submit" class="px-4 py-2 rounded-xl bg-primary-700 text-white hover:bg-primary-800 dark:bg-accent dark:hover:bg-yellow-500 shadow-soft transition-colors duration-300" data-i18n="contact_btn">
+            Envoyer
+          </button>
+        </form>
+        
+      </div>
+      
+      <!-- Carte Google Maps -->
+      <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 fade-up shadow-soft">
+        <div class="w-full h-64 md:h-96 overflow-hidden">
+          <iframe
+            class="w-full h-full"
+            title="Localisation — Hôtel Glody, Kisangani"
+            style="border:0;"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d397.472941077995!2d25.2022827!3d0.5156370000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1757a0da420c661f%3A0x72ab9c1e0c9f1f7c!2sHotel%20Glody!5e0!3m2!1sfr!2scd!4v1732420000000">
+          </iframe>
         </div>
-        <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 fade-up shadow-soft">
-        <div class="w-full h-64 md:h-96 overflow-hidden rounded-2xl">
-  <iframe
-    class="w-full h-full"
-    title="Localisation — Hôtel Glody, Kisangani"
-    style="border:0;"
-    loading="lazy"
-    allowfullscreen
-    referrerpolicy="no-referrer-when-downgrade"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d397.472941077995!2d25.2022827!3d0.5156370000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1757a0da420c661f%3A0x72ab9c1e0c9f1f7c!2sHotel%20Glody!5e0!3m2!1sfr!2scd!4v1732420000000">
-  </iframe>
-</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Script de gestion du formulaire AJAX pour les messages de retour -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const messageBox = document.getElementById('message-box');
+    const submitButton = document.getElementById('submit-button');
+
+    // Assure que l'élément est vide et caché au départ
+    messageBox.textContent = '';
+    
+    // Fonction pour afficher un message
+    const showMessage = (text, isSuccess = true) => {
+      // Nettoyer les anciennes classes
+      messageBox.classList.remove('bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+      
+      // Ajouter les nouvelles classes (Tailwind)
+      if (isSuccess) {
+        messageBox.classList.add('bg-green-100', 'text-green-800');
+      } else {
+        messageBox.classList.add('bg-red-100', 'text-red-800');
+      }
+      
+      messageBox.textContent = text;
+      // Afficher l'élément avec une transition douce
+      messageBox.classList.remove('opacity-0', 'h-0');
+      messageBox.classList.add('opacity-100', 'h-auto');
+      
+      // Masquer le message après 5 secondes
+      setTimeout(() => {
+        messageBox.classList.remove('opacity-100', 'h-auto');
+        messageBox.classList.add('opacity-0', 'h-0');
+      }, 5000);
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      
+      // Désactiver le bouton pendant l'envoi
+      submitButton.disabled = true;
+      submitButton.textContent = 'Envoi en cours...';
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          // Succès
+          showMessage('✅ Merci, votre message a été envoyé avec succès !', true);
+          form.reset();
+        } else {
+          // Échec (ex: erreur de Web3Forms ou botcheck)
+          console.error('Erreur de soumission:', result);
+          showMessage('❌ Une erreur est survenue. Veuillez réessayer.', false);
+        }
+      } catch (error) {
+        // Échec de la connexion/réseau
+        console.error('Erreur réseau:', error);
+        showMessage('❌ Échec de la connexion. Vérifiez votre réseau.', false);
+      } finally {
+        // Réactiver le bouton
+        submitButton.disabled = false;
+        submitButton.textContent = 'Envoyer';
+      }
+    });
+  });
+</script>
 
 <!-- Footer amélioré -->
 <footer class="relative overflow-hidden bg-primary-900 dark:bg-black text-primary-50 dark:text-slate-300 transition-colors">
@@ -1320,26 +1426,123 @@
       </ul>
     </div>
 
-    <!-- Colonne 4 : Newsletter -->
-    <div>
-      <h5 class="font-semibold mb-2" data-i18n="foot_news">Newsletter</h5>
-      <form 
-        class="mt-2 flex gap-2" 
-        onsubmit="event.preventDefault(); alert(currentLang==='fr'?'Merci pour votre inscription !':'Thanks for subscribing!'); this.reset();">
-        <input 
-          type="email" 
-          required 
-          class="flex-1 rounded-xl px-3 py-2 border border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-400 text-slate-900 placeholder:text-slate-400"
-          placeholder="Votre email" 
-          data-i18n-ph="news_email">
-        <button 
-          class="px-4 py-2 rounded-xl bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition-shadow shadow-soft hover:shadow-lg" 
-          data-i18n="news_ok">
-          OK
-        </button>
-      </form>
+<!-- Colonne 4 : Newsletter (Web3Forms) -->
+<div>
+  <h5 class="font-semibold mb-2" data-i18n="foot_news">Newsletter</h5>
+  
+  <!-- Formulaire Newsletter -->
+  <form id="newsletter-form" action="https://api.web3forms.com/submit" method="POST" class="mt-2 flex flex-col gap-2">
+    
+    <!-- Clé Web3Forms MASQUÉE (bfa99740-06cb-45d6-8583-201a7b0d8236) -->
+    <input type="hidden" name="access_key" value="bfa99740-06cb-45d6-8583-201a7b0d8236">
+    <input type="hidden" name="botcheck" value=""> 
+    <!-- Sujet pour mieux identifier les soumissions dans votre tableau de bord Web3Forms -->
+    <input type="hidden" name="subject" value="Nouvelle inscription à la Newsletter Glodi VIP">
+
+    <div class="flex gap-2">
+      <input 
+        type="email" 
+        name="Email"
+        required 
+        class="flex-1 rounded-xl px-3 py-2 border border-transparent focus:outline-none focus:ring-2 focus:ring-yellow-400 text-slate-900 placeholder:text-slate-400"
+        placeholder="Votre email" 
+        data-i18n-ph="news_email">
+      <button 
+        id="subscribe-button"
+        type="submit"
+        class="px-4 py-2 rounded-xl bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition-shadow shadow-soft hover:shadow-lg" 
+        data-i18n="news_ok">
+        OK
+      </button>
     </div>
-  </div>
+    
+    <!-- Conteneur de message spécifique à la newsletter -->
+    <div id="newsletter-message-box" class="px-3 py-2 text-center text-xs font-medium transition-all duration-300 opacity-0 h-0 overflow-hidden rounded-xl"></div>
+  </form>
+</div>
+
+<!-- Script de gestion du formulaire AJAX pour la Newsletter -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('newsletter-form');
+    const messageBox = document.getElementById('newsletter-message-box');
+    const submitButton = document.getElementById('subscribe-button');
+
+    // Assure que l'élément est vide et caché au départ
+    messageBox.textContent = '';
+    
+    // Fonction pour afficher un message
+    const showMessage = (text, isSuccess = true) => {
+      // Nettoyer les anciennes classes
+      messageBox.classList.remove('bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800');
+      
+      // Ajouter les nouvelles classes (Tailwind)
+      if (isSuccess) {
+        // Couleurs Succès
+        messageBox.classList.add('bg-green-100', 'text-green-800');
+      } else {
+        // Couleurs Échec
+        messageBox.classList.add('bg-red-100', 'text-red-800');
+      }
+      
+      messageBox.textContent = text;
+      
+      // Afficher l'élément avec une transition douce
+      messageBox.classList.remove('opacity-0', 'h-0');
+      messageBox.classList.add('opacity-100', 'h-auto');
+      
+      // Masquer le message après 5 secondes
+      setTimeout(() => {
+        messageBox.classList.remove('opacity-100', 'h-auto');
+        messageBox.classList.add('opacity-0', 'h-0');
+      }, 5000);
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+      
+      // Désactiver le bouton pendant l'envoi
+      submitButton.disabled = true;
+      const originalText = submitButton.textContent;
+      submitButton.textContent = 'Envoi...';
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          // Succès
+          showMessage('✅ Merci pour votre inscription !', true);
+          form.reset();
+        } else {
+          // Échec (ex: erreur de Web3Forms ou botcheck)
+          console.error('Erreur de soumission de la newsletter:', result);
+          showMessage('❌ Erreur: L\'inscription a échoué. Veuillez vérifier l\'email.', false);
+        }
+      } catch (error) {
+        // Échec de la connexion/réseau
+        console.error('Erreur réseau:', error);
+        showMessage('❌ Échec de la connexion. Vérifiez votre réseau.', false);
+      } finally {
+        // Réactiver le bouton
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+      }
+    });
+  });
+</script>
 
   <!-- Ligne inférieure -->
   <div class="relative border-t border-white/10 dark:border-slate-700">
@@ -1408,240 +1611,6 @@
     setTheme(localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
     themeToggle.addEventListener('click', ()=> setTheme(root.classList.contains('dark')?'light':'dark'));
 
-    // ---- i18n (FR/EN) + transition douce
-    let currentLang = localStorage.getItem('lang') || 'fr';
-
-    const I18N = {
-      fr: {
-        meta_title: "Hôtel Glodi VIP — Séjours d'Exception à Kisangani",
-        meta_desc: "Hôtel Glodi VIP à Kisangani : chambres élégantes, spa, restaurant gastronomique et salles de conférence. Réservez au meilleur tarif.",
-        brand: "Hôtel Glodi VIP",
-        top_address: "Avenue Kitima N°2, Quartier Plateau Boyoma, Makiso, Kisangni, RDC",
-        nav_rooms: "Chambres",
-        nav_experiences: "Expériences",
-        nav_restaurant: "Restaurant",
-        nav_spa: "Spa",
-        nav_gallery: "Galerie",
-        nav_contact: "Contact",
-        cta_book: "Réserver",
-        hero_title: "L’Art du Luxe à Kisangani",
-        hero_sub: "Bienvenue à l’Hôtel Glodi VIP — élégance, confort et raffinement au cœur de la ville.",
-        hero_cta1: "Réserver maintenant",
-        hero_cta2: "Explorer",
-        b1: "Wi-Fi ultra-rapide",
-        b2: "A Kisangani",
-        b3: "Check-in 24/7",
-        b4: "VIP",
-        rooms_title: "Nos chambres & suites",
-        rooms_sub: "Conçues pour le confort, baignées de lumière, pensées pour vous.",
-        rooms_cta: "Voir les disponibilités",
-        r1_price: "À partir de 30$",
-        r1_title: "Chambre Classique",
-        r1_desc: "Lit queen, douche à l'italienne, bureau ergonomique, vue ville.",
-        r2_price: "À partir de 50$",
-        r2_title: "Suite Exécutive",
-        r2_desc: "Espace salon, baignoire, balcon privatif, accès lounge.",
-        r3_price: "À partir de 70$",
-        r3_title: "Chambre Familiale",
-        r3_desc: "2 lits doubles, canapé-lit, espace jeux enfants, lit bébé sur demande.",
-        e1_title: "Détente",
-        e1_desc: "Espace raffiné pour se relaxer, avec transats et cocktails signature.",
-        e2_title: "Business & Conférences",
-        e2_desc: "Salles équipées (projecteur, sonorisation, Wi-Fi), service traiteur.",
-        e3_title: "Excursions locales",
-        e3_desc: "Découverte du fleuve Congo, chutes Wagenia et patrimoine local.",
-        rest_title: "Restaurant & Bar",
-        rest_desc: "Cuisine de saison, inspirations congolaises et internationales. Menu dégustation, carte du midi et du soir, options végétariennes.",
-        rest_b1: "🍽️ Menu dégustation",
-        rest_b2: "🥗 Options veggie",
-        rest_b3: "🍷 Cave & cocktails",
-        rest_b4: "🕒 Service jusqu’à tard",
-        rest_cta: "Réserver une table",
-        spa_title: "Spa & Bien-être",
-        spa_desc: "Massages signature, hammam, sauna et soins du visage. Laissez-vous porter par une bulle de sérénité.",
-        spa_b1: "Massage relaxant",
-        spa_b2: "Hammam",
-        spa_b3: "Sauna",
-        spa_b4: "Soins visage",
-        gal_title: "Galerie",
-        gal_sub: "Un aperçu de l’univers Glodi VIP.",
-        contact_title: "Contact & Accès",
-        contact_sub: "Notre équipe vous répond 24/7.",
-        contact_name: "Votre nom",
-        contact_email: "Email",
-        contact_phone: "Téléphone",
-        contact_msg: "Votre message",
-        contact_btn: "Envoyer",
-        foot_tag: "Séjours d’exception à Kisangani.",
-        foot_contacts: "Coordonnées",
-        foot_nav: "Navigation",
-        foot_news: "Newsletter",
-        news_email: "Votre email",
-        news_ok: "OK",
-        rights: "Tous droits réservés.",
-        best_rate: "Meilleur tarif garanti",
-        apartments_title: "Appartements à louer",
-        apartments_sub: "Découvrez nos appartements haut de gamme à Kisangani — confort, sécurité et modernité.",
-        apartments_cta: "Demander une visite",
-        warehouses_title: "Entrepôts & Espaces professionnels",
-        warehouses_sub: "Des espaces sécurisés, modulables et adaptés à vos besoins logistiques et commerciaux.",
-        warehouses_cta: "Demander un devis",
-        nav_apartments: "Appartements",
-        nav_warehouses: "Entrepôts",
-  whatsapp_cta: "WhatsApp",
-  // Review section translations
-  review_section_title: "Donnez votre avis",
-  review_sub: "Partagez votre expérience — restez sur notre site, nous ouvrirons la fenêtre Google pour publier votre avis.",
-  review_placeholder: "Écrivez votre avis ici...",
-  review_btn_open: "Ouvrir l'interface Google pour publier",
-  review_copy_success: "Texte copié dans le presse-papiers. Collez-le dans la fenêtre Google si besoin.",
-  review_copy_fail: "Impossible de copier automatiquement. Veuillez sélectionner et copier votre texte manuellement.",
-  review_no_placeid: "Place ID Google non configuré. Contactez l'administrateur pour activer les avis depuis ce site.",
-  review_instructions: "Astuce: le texte sera copié, puis la fenêtre d'avis Google s'ouvrira. Collez votre avis si nécessaire.",
-        // WhatsApp messages per offer (FR)
-        whatsapp_r1: "Bonjour, je souhaite réserver la Chambre Classique (À partir de 30$). Pouvez-vous me confirmer les disponibilités ?",
-        whatsapp_r2: "Bonjour, je souhaite réserver la Suite Exécutive (À partir de 50$). Pouvez-vous me donner les dates disponibles ?",
-        whatsapp_r3: "Bonjour, je souhaite réserver la Chambre Familiale (À partir de 70$). Merci de m'indiquer les options famille.",
-        whatsapp_apartments_vip: "Bonjour, je suis intéressé(e) par l'Appartement VIP (1200 $ / mois). Pouvez-vous organiser une visite ?",
-        whatsapp_apartments_deluxe: "Bonjour, je souhaite des infos sur l'Appartement Deluxe (1500 $ / mois). Disponible pour visite ?",
-        whatsapp_apartments_studio: "Bonjour, je veux louer le Studio Urbain (700 $ / mois). Quelles sont les conditions ?",
-        whatsapp_warehouses_standard: "Bonjour, je souhaite louer l'Entrepôt Standard (500 m²). Pouvez-vous m'envoyer les dimensions et prix ?",
-        whatsapp_warehouses_industrial: "Bonjour, je souhaite louer l'Entrepôt Industriel (1200 m²). Merci de m'indiquer la disponibilité et le tarif.",
-        whatsapp_warehouses_modulable: "Bonjour, je veux des infos sur l'Espace Modulable (200–800 m²). Pouvez-vous me contacter pour un devis ?"
-      },
-      en: {
-        meta_title: "Glodi VIP Hotel — Exceptional Stays in Kisangani",
-        meta_desc: "Glodi VIP Hotel in Kisangani: elegant rooms, spa, gourmet restaurant and conference halls. Book direct for the best rate.",
-        brand: "Glodi VIP Hotel",
-        top_address: "Avenue Kitima N°2, Quartier Plateau Boyoma, Makiso, Kisangni, RDC",
-        nav_rooms: "Rooms",
-        nav_experiences: "Experiences",
-        nav_restaurant: "Restaurant",
-        nav_spa: "Spa",
-        nav_gallery: "Gallery",
-        nav_contact: "Contact",
-        cta_book: "Book",
-        hero_title: "The Art of Luxury in Kisangani",
-        hero_sub: "Welcome to Glodi VIP Hotel — elegance, comfort and refinement in the heart of the city.",
-        hero_cta1: "Book now",
-        hero_cta2: "Discover",
-        b1: "Ultra-fast Wi-Fi",
-        b2: "In Kisangani",
-        b3: "24/7 Check-in",
-        b4: "VIP",
-        rooms_title: "Our Rooms & Suites",
-        rooms_sub: "Designed for comfort, bathed in light, crafted for you.",
-        rooms_cta: "Check availability",
-        r1_price: "From $89",
-        r1_title: "Classic Room",
-        r1_desc: "Queen bed, walk-in shower, ergonomic desk, city view.",
-        r2_price: "From $149",
-        r2_title: "Executive Suite",
-        r2_desc: "Lounge area, bathtub, private balcony, lounge access.",
-        r3_price: "From $129",
-        r3_title: "Family Room",
-        r3_desc: "Two double beds, sofabed, kids play area, baby cot on request.",
-        e1_title: "Relaxation",
-        e1_desc: "Refined space to unwind, with loungers and signature cocktails.",
-        e2_title: "Business & Conferences",
-        e2_desc: "Equipped rooms (projector, PA, Wi-Fi), catering service.",
-        e3_title: "Local Excursions",
-        e3_desc: "Discover the Congo River, Wagenia Falls and local heritage.",
-        rest_title: "Restaurant & Bar",
-        rest_desc: "Seasonal cuisine with Congolese and international inspirations. Tasting menu, lunch & dinner à la carte, vegetarian options.",
-        rest_b1: "🍽️ Tasting menu",
-        rest_b2: "🥗 Veggie options",
-        rest_b3: "🍷 Cellar & cocktails",
-        rest_b4: "🕒 Late service",
-        rest_cta: "Reserve a table",
-        spa_title: "Spa & Wellness",
-        spa_desc: "Signature massages, hammam, sauna and facials. Float in a bubble of serenity.",
-        spa_b1: "Relaxing massage",
-        spa_b2: "Hammam",
-        spa_b3: "Sauna",
-        spa_b4: "Facial care",
-        gal_title: "Gallery",
-        gal_sub: "A glimpse into the Glodi VIP universe.",
-        contact_title: "Contact & Access",
-        contact_sub: "Our team answers 24/7.",
-        contact_name: "Your name",
-        contact_email: "Email",
-        contact_phone: "Phone",
-        contact_msg: "Your message",
-        contact_btn: "Send",
-        foot_tag: "Exceptional stays in Kisangani.",
-        foot_contacts: "Contacts",
-        foot_nav: "Navigation",
-        foot_news: "Newsletter",
-        news_email: "Your email",
-        news_ok: "OK",
-        rights: "All rights reserved.",
-        best_rate: "Best rate guaranteed",
-        apartments_title: "Apartments for rent",
-        apartments_sub: "Discover our high-end apartments in Kisangani — comfort, security and modern living.",
-        apartments_cta: "Request a visit",
-        warehouses_title: "Warehouses & Professional Spaces",
-        warehouses_sub: "Secure, modular spaces tailored to your logistical and commercial needs.",
-        warehouses_cta: "Request a quote",
-        nav_apartments: "Apartments",
-        nav_warehouses: "Warehouses",
-  whatsapp_cta: "WhatsApp",
-  // Review section translations
-  review_section_title: "Leave a review",
-  review_sub: "Share your experience — stay on our site, we'll open Google to publish your review.",
-  review_placeholder: "Write your review here...",
-  review_btn_open: "Open Google review interface",
-  review_copy_success: "Text copied to clipboard. Paste it into Google if needed.",
-  review_copy_fail: "Automatic copy failed. Please select & copy your text manually.",
-  review_no_placeid: "Google Place ID not configured. Contact admin to enable reviews from this site.",
-  review_instructions: "Tip: your text will be copied, then the Google review window opens. Paste if necessary.",
-        // WhatsApp messages per offer (EN)
-        whatsapp_r1: "Hello, I'd like to book the Classic Room (From $89). Could you confirm availability?",
-        whatsapp_r2: "Hello, I'd like to book the Executive Suite (From $149). Could you share available dates?",
-        whatsapp_r3: "Hello, I'd like to book the Family Room (From $129). Please advise family options.",
-        whatsapp_apartments_vip: "Hello, I'm interested in the VIP Apartment ($1200 / month). Can we schedule a viewing?",
-        whatsapp_apartments_deluxe: "Hello, I need info on the Deluxe Apartment ($1500 / month). Is it available for viewing?",
-        whatsapp_apartments_studio: "Hello, I'd like to rent the Urban Studio ($700 / month). What are the terms?",
-        whatsapp_warehouses_standard: "Hello, I'm interested in the Standard Warehouse (500 m²). Please send dimensions and pricing.",
-        whatsapp_warehouses_industrial: "Hello, I'm interested in the Industrial Warehouse (1200 m²). Please share availability and price.",
-        whatsapp_warehouses_modulable: "Hello, I'd like details on the Modular Space (200–800 m²). Can you contact me for a quote?"
-      }
-    };
-
-    function applyI18n(lang){
-      // fade out
-      $$('.lang-fade,[data-i18n],[data-i18n-ph]').forEach(el=>el.classList.add('hide'));
-      setTimeout(()=>{
-        // text nodes
-        $$('.lang-fade,[data-i18n]').forEach(el=>{
-          const key = el.getAttribute('data-i18n');
-          if(key && I18N[lang][key]!==undefined){
-            if(el.tagName.toLowerCase()==='title' || el.matches('meta[name="description"]')){
-              if(el.tagName.toLowerCase()==='title') el.textContent = I18N[lang][key];
-              else el.setAttribute('content', I18N[lang][key]);
-            } else el.textContent = I18N[lang][key];
-          }
-        });
-        // placeholders
-        $$('[data-i18n-ph]').forEach(el=>{
-          const key = el.getAttribute('data-i18n-ph');
-          if(I18N[lang][key]!==undefined) el.setAttribute('placeholder', I18N[lang][key]);
-        });
-        // lang attr
-        document.documentElement.setAttribute('lang', lang==='fr'?'fr':'en');
-        // fade in
-        $$('.lang-fade,[data-i18n],[data-i18n-ph]').forEach(el=>el.classList.remove('hide'));
-      }, 150);
-      localStorage.setItem('lang', lang);
-      currentLang = lang;
-    }
-
-    // init i18n
-    applyI18n(currentLang);
-
-    // boutons langue
-    $('#lang-fr').addEventListener('click', ()=> applyI18n('fr'));
-    $('#lang-en').addEventListener('click', ()=> applyI18n('en'));
 
     // ---- WhatsApp booking helpers
     const WHATSAPP_PHONE = '243820600712'; // international format without +

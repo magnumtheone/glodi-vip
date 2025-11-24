@@ -810,27 +810,203 @@
     </div>
   </section>-->
 
-  <!-- Galerie (mini) -->
-  <section id="galerie" class="bg-primary-50 dark:bg-gray-900 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 py-16">
-      <div class="flex items-end justify-between gap-6 mb-8">
-        <div class="fade-up">
-          <h2 class="text-3xl md:text-4xl font-extrabold" data-i18n="gal_title">Galerie</h2>
-          <p class="text-slate-600 dark:text-slate-400 mt-2" data-i18n="gal_sub">Un aperçu de l’univers Glodi VIP.</p>
+<section id="galerie" class="bg-primary-50 dark:bg-gray-900 transition-colors">
+  <div class="max-w-7xl mx-auto px-4 py-16">
+    
+    <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-12 border-b pb-4 border-slate-200 dark:border-slate-800">
+      <div class="fade-up">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white" data-i18n="gal_title">
+          Galerie Numérique
+        </h2>
+        <p class="text-lg text-slate-600 dark:text-slate-400 mt-2" data-i18n="gal_sub">
+          Explorez l’univers Glodi VIP en haute résolution.
+        </p>
+      </div>
+      <div class="flex gap-3 text-sm font-medium text-gray-700 dark:text-gray-300">
         </div>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <img class="h-40 w-full object-cover rounded-xl border border-slate-200 dark:border-slate-700 fade-up" src="images/ext.jpg" alt="Extérieur de l'hôtel Glodi VIP Kisangani">
-        <img class="h-40 w-full object-cover rounded-xl border border-slate-200 dark:border-slate-700 fade-up" src="images/executive5.jpg" alt="Parking gratuit de l'hôtel Glodi VIP Kisangani">
-        <img class="h-40 w-full object-cover rounded-xl border border-slate-200 dark:border-slate-700 fade-up" src="images/amb.jpg" alt="Ambiance chaleureuse au restaurant Glodi VIP Kisangani">
-        <img class="h-40 w-full object-cover rounded-xl border border-slate-200 dark:border-slate-700 fade-up" src="images/amb1.jpg" alt="restaurant Glodi VIP Kisangani">
-        <img class="h-40 w-full object-cover rounded-xl border border-slate-200 dark:border-slate-700 fade-up" src="images/executive4.jpg" alt="décors artistiques au Glodi VIP Kisangani">
-        <img class="h-40 w-full object-cover rounded-xl border border-slate-200 dark:border-slate-700 fade-up" src="images/classique3.jpg" alt="Balcon privatif à l'hôtel Glodi VIP">
-        <img class="h-40 w-full object-cover rounded-xl border border-slate-200 dark:border-slate-700 fade-up" src="images/ajout (1).jpg" alt="couloir tranquille avec une ambiance chaleureuse au Glodi VIP Kisangani">
-        <img class="h-40 w-full object-cover rounded-xl border border-slate-200 dark:border-slate-700 fade-up" src="images/ajout (2).jpg" alt="facade Extérieur">
-      </div>
     </div>
-  </section>
+    
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      
+      <button class="gallery-item group fade-up relative overflow-hidden rounded-xl shadow-lg border-2 border-slate-100 dark:border-gray-700 transition duration-300 hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-primary-500/50" 
+              data-img-src="images/ext.jpg" data-alt-text="Extérieur de l'hôtel Glodi VIP Kisangani" aria-label="Voir l'image en grand : Extérieur de l'hôtel Glodi VIP Kisangani">
+        <img class="h-40 w-full object-cover transition duration-300 group-hover:opacity-80 group-hover:saturate-150" 
+             src="images/ext.jpg" 
+             alt="Vignette: Extérieur de l'hôtel Glodi VIP Kisangani">
+        <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-0 transition"></div>
+      </button>
+
+      <button class="gallery-item group fade-up relative overflow-hidden rounded-xl shadow-lg border-2 border-slate-100 dark:border-gray-700 transition duration-300 hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-primary-500/50" 
+              data-img-src="images/executive5.jpg" data-alt-text="Parking gratuit de l'hôtel Glodi VIP Kisangani" aria-label="Voir l'image en grand : Parking gratuit de l'hôtel Glodi VIP Kisangani">
+        <img class="h-40 w-full object-cover transition duration-300 group-hover:opacity-80 group-hover:saturate-150" 
+             src="images/executive5.jpg" 
+             alt="Vignette: Parking gratuit de l'hôtel Glodi VIP Kisangani">
+      </button>
+
+      <button class="gallery-item group fade-up relative overflow-hidden rounded-xl shadow-lg border-2 border-slate-100 dark:border-gray-700 transition duration-300 hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-primary-500/50" 
+              data-img-src="images/amb.jpg" data-alt-text="Ambiance chaleureuse au restaurant Glodi VIP Kisangani" aria-label="Voir l'image en grand : Ambiance chaleureuse au restaurant Glodi VIP Kisangani">
+        <img class="h-40 w-full object-cover transition duration-300 group-hover:opacity-80 group-hover:saturate-150" 
+             src="images/amb.jpg" 
+             alt="Vignette: Ambiance chaleureuse au restaurant Glodi VIP Kisangani">
+      </button>
+
+      <button class="gallery-item group fade-up relative overflow-hidden rounded-xl shadow-lg border-2 border-slate-100 dark:border-gray-700 transition duration-300 hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-primary-500/50" 
+              data-img-src="images/amb1.jpg" data-alt-text="restaurant Glodi VIP Kisangani" aria-label="Voir l'image en grand : restaurant Glodi VIP Kisangani">
+        <img class="h-40 w-full object-cover transition duration-300 group-hover:opacity-80 group-hover:saturate-150" 
+             src="images/amb1.jpg" 
+             alt="Vignette: restaurant Glodi VIP Kisangani">
+      </button>
+      
+      <button class="gallery-item group fade-up relative overflow-hidden rounded-xl shadow-lg border-2 border-slate-100 dark:border-gray-700 transition duration-300 hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-primary-500/50" 
+              data-img-src="images/executive4.jpg" data-alt-text="décors artistiques au Glodi VIP Kisangani" aria-label="Voir l'image en grand : décors artistiques au Glodi VIP Kisangani">
+        <img class="h-40 w-full object-cover transition duration-300 group-hover:opacity-80 group-hover:saturate-150" 
+             src="images/executive4.jpg" 
+             alt="Vignette: décors artistiques au Glodi VIP Kisangani">
+      </button>
+
+      <button class="gallery-item group fade-up relative overflow-hidden rounded-xl shadow-lg border-2 border-slate-100 dark:border-gray-700 transition duration-300 hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-primary-500/50" 
+              data-img-src="images/classique3.jpg" data-alt-text="Balcon privatif à l'hôtel Glodi VIP" aria-label="Voir l'image en grand : Balcon privatif à l'hôtel Glodi VIP">
+        <img class="h-40 w-full object-cover transition duration-300 group-hover:opacity-80 group-hover:saturate-150" 
+             src="images/classique3.jpg" 
+             alt="Vignette: Balcon privatif à l'hôtel Glodi VIP">
+      </button>
+
+      <button class="gallery-item group fade-up relative overflow-hidden rounded-xl shadow-lg border-2 border-slate-100 dark:border-gray-700 transition duration-300 hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-primary-500/50" 
+              data-img-src="images/ajout (1).jpg" data-alt-text="couloir tranquille avec une ambiance chaleureuse au Glodi VIP Kisangani" aria-label="Voir l'image en grand : couloir tranquille avec une ambiance chaleureuse au Glodi VIP Kisangani">
+        <img class="h-40 w-full object-cover transition duration-300 group-hover:opacity-80 group-hover:saturate-150" 
+             src="images/ajout (1).jpg" 
+             alt="Vignette: couloir tranquille avec une ambiance chaleureuse au Glodi VIP Kisangani">
+      </button>
+
+      <button class="gallery-item group fade-up relative overflow-hidden rounded-xl shadow-lg border-2 border-slate-100 dark:border-gray-700 transition duration-300 hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-primary-500/50" 
+              data-img-src="images/ajout (2).jpg" data-alt-text="facade Extérieur" aria-label="Voir l'image en grand : facade Extérieur">
+        <img class="h-40 w-full object-cover transition duration-300 group-hover:opacity-80 group-hover:saturate-150" 
+             src="images/ajout (2).jpg" 
+             alt="Vignette: facade Extérieur">
+      </button>
+      
+    </div>
+    
+  </div>
+</section>
+
+<div id="lightbox" class="fixed inset-0 z-50 hidden bg-black bg-opacity-90 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+    <div class="relative max-w-5xl w-full h-full sm:h-auto">
+        <button id="lightbox-close" class="absolute top-4 right-4 text-white text-3xl z-20 p-2 rounded-full bg-black/50 hover:bg-black/70 transition" aria-label="Fermer la galerie">
+          &times;
+        </button>
+        
+        <div class="relative flex items-center justify-center h-full">
+            <img id="lightbox-image" src="" alt="" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl">
+            
+            <p id="lightbox-caption" class="absolute bottom-0 w-full p-3 text-center text-white bg-black bg-opacity-60 rounded-b-lg text-sm"></p>
+            
+            <button id="lightbox-prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 text-white text-4xl opacity-70 hover:opacity-100 transition focus:outline-none" aria-label="Image précédente">
+              &#10094;
+            </button>
+            
+            <button id="lightbox-next" class="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 text-white text-4xl opacity-70 hover:opacity-100 transition focus:outline-none" aria-label="Image suivante">
+              &#10095;
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxClose = document.getElementById('lightbox-close');
+    const lightboxPrev = document.getElementById('lightbox-prev');
+    const lightboxNext = document.getElementById('lightbox-next');
+    
+    let currentIndex = 0;
+
+    // Fonction pour ouvrir la Lightbox
+    const openLightbox = (index) => {
+      currentIndex = index;
+      const item = galleryItems[currentIndex];
+      
+      lightboxImage.src = item.getAttribute('data-img-src');
+      lightboxImage.alt = item.getAttribute('data-alt-text');
+      lightboxCaption.textContent = item.getAttribute('data-alt-text');
+      
+      // Afficher le Lightbox et les transitions
+      lightbox.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Empêcher le scroll du body
+      
+      // Petite temporisation pour l'effet de transition CSS (opacity-0 -> opacity-100)
+      setTimeout(() => {
+        lightbox.classList.remove('opacity-0');
+      }, 10);
+    };
+
+    // Fonction pour fermer la Lightbox
+    const closeLightbox = () => {
+      lightbox.classList.add('opacity-0');
+      document.body.style.overflow = ''; // Restaurer le scroll du body
+      
+      // Masquer après la transition
+      setTimeout(() => {
+        lightbox.classList.add('hidden');
+      }, 300); 
+    };
+
+    // Fonction pour naviguer
+    const navigate = (direction) => {
+      currentIndex += direction;
+      
+      // Boucle infinie (dernier vers premier et vice-versa)
+      if (currentIndex < 0) {
+        currentIndex = galleryItems.length - 1;
+      } else if (currentIndex >= galleryItems.length) {
+        currentIndex = 0;
+      }
+      
+      // Mettre à jour l'image
+      openLightbox(currentIndex);
+    };
+
+    // Attacher les événements de clic sur les images
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => openLightbox(index));
+    });
+
+    // Attacher les événements de la Lightbox
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', (e) => {
+      e.stopPropagation(); // Empêche le clic de fermer accidentellement
+      navigate(-1);
+    });
+    lightboxNext.addEventListener('click', (e) => {
+      e.stopPropagation(); // Empêche le clic de fermer accidentellement
+      navigate(1);
+    });
+
+    // Fermer en cliquant en dehors de l'image (sur l'overlay)
+    lightbox.addEventListener('click', (e) => {
+      // S'assurer qu'on clique sur l'overlay et non sur les contrôles internes
+      if (e.target.id === 'lightbox' || e.target.id === 'lightbox-image' || e.target.id === 'lightbox-caption') {
+          closeLightbox();
+      }
+    });
+
+    // Fermer avec la touche ESC
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('hidden')) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+          navigate(-1);
+        } else if (e.key === 'ArrowRight') {
+          navigate(1);
+        }
+      }
+    });
+  });
+</script>
 
 <!-- Section: Donnez votre avis (Quick Google Review) - avec Google Maps, review & animations -->
 <section id="avis" class="bg-white dark:bg-gray-900 transition-colors">

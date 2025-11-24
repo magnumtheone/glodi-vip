@@ -832,37 +832,249 @@
     </div>
   </section>
 
-  <!-- Section: Donnez votre avis (Quick Google Review) -->
-  <section id="avis" class="bg-white dark:bg-gray-900 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 py-12">
-      <div class="fade-up">
-        <h2 class="text-3xl md:text-4xl font-extrabold" data-i18n="review_section_title">Donnez votre avis</h2>
-        <p class="text-slate-600 dark:text-slate-400 mt-2" data-i18n="review_sub">Partagez votre expérience — restez sur notre site, nous ouvrirons la fenêtre Google pour publier votre avis.</p>
+<!-- Section: Donnez votre avis (Quick Google Review) - avec Google Maps, review & animations -->
+<section id="avis" class="bg-white dark:bg-gray-900 transition-colors">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div class="fade-up">
+      <h2 class="text-3xl md:text-4xl font-extrabold" data-i18n="review_section_title">Donnez votre avis</h2>
+      <p class="text-slate-600 dark:text-slate-400 mt-2" data-i18n="review_sub">
+        Partagez votre expérience — restez sur notre site, nous ouvrirons la fenêtre Google pour publier votre avis.
+      </p>
 
-        <form id="quickReviewForm" class="mt-6">
-          <div id="reviewStars" class="flex items-center gap-1" aria-hidden="false">
-            <button type="button" class="text-slate-400 hover:text-yellow-400 transition">★</button>
-            <button type="button" class="text-slate-400 hover:text-yellow-400 transition">★</button>
-            <button type="button" class="text-slate-400 hover:text-yellow-400 transition">★</button>
-            <button type="button" class="text-slate-400 hover:text-yellow-400 transition">★</button>
-            <button type="button" class="text-slate-400 hover:text-yellow-400 transition">★</button>
-          </div>
+      <form id="quickReviewForm" class="mt-6" onsubmit="return false;">
+        <div id="reviewStars" class="flex items-center gap-1" aria-hidden="false">
+          <button type="button" class="text-slate-400 hover:text-yellow-400 transition">★</button>
+          <button type="button" class="text-slate-400 hover:text-yellow-400 transition">★</button>
+          <button type="button" class="text-slate-400 hover:text-yellow-400 transition">★</button>
+          <button type="button" class="text-slate-400 hover:text-yellow-400 transition">★</button>
+          <button type="button" class="text-slate-400 hover:text-yellow-400 transition">★</button>
+        </div>
 
-          <textarea id="reviewText" rows="4" class="mt-4 w-full rounded-xl px-3 py-2 border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-primary-600" data-i18n-ph="review_placeholder"></textarea>
+        <textarea id="reviewText" rows="4"
+          class="mt-4 w-full rounded-xl px-3 py-2 border border-slate-300 dark:border-slate-700 bg-transparent
+          focus:outline-none focus:ring-2 focus:ring-primary-600"
+          data-i18n-ph="review_placeholder" placeholder="Écrivez votre avis ici..."></textarea>
 
-          <div class="mt-4 flex items-center gap-3">
-            <button id="openGoogleReviewBtn" type="button" data-place-id="REPLACE_WITH_GOOGLE_PLACE_ID" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition" data-i18n="review_btn_open">
-              <!-- Google-like review icon (pin + star) -->
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#4285F4"/><path d="M12 6.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z" fill="#FFF" opacity="0.9"/><path d="M12 9.2l.9.6-.3-1 1-.8-1.2 0 .2-1- .5.9L12 9.2z" fill="#FBBC05"/></svg>
-              <span class="sr-only" data-i18n="review_btn_open">Ouvrir l'interface Google pour publier</span>
-              <span data-i18n="review_btn_open">Ouvrir l'interface Google pour publier</span>
-            </button>
-            <p id="reviewNote" class="text-sm text-slate-600 dark:text-slate-400" data-i18n="review_instructions">Astuce: le texte sera copié, puis la fenêtre d'avis Google s'ouvrira. Collez votre avis si nécessaire.</p>
-          </div>
-        </form>
+        <div class="mt-4 flex flex-col md:flex-row items-start md:items-center gap-3">
+          <!-- Ouvrir Google Maps (page place fournie) -->
+          <a id="openMapsBtn"
+             class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700 transition"
+             target="_blank"
+             rel="noopener noreferrer"
+             href="https://www.google.com/maps/place/Hotel+Glody/@0.515637,25.2022827,17z/data=!3m1!4b1!4m6!3m5!1s0x1757a0da420c661f:0x72ab9c1e0c9f1f7c!8m2!3d0.515637!4d25.2022827!16s%2Fg%2F11bxfsv3pb?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
+             title="Ouvrir Hotel Glody sur Google Maps">
+            <!-- map icon -->
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#fff"/>
+              <path d="M12 6.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z" fill="#000" opacity="0.9"/>
+            </svg>
+            <span>Ouvrir dans Google Maps</span>
+          </a>
+
+          <!-- Laisser un avis (va tenter d'utiliser Place ID, sinon ouvre recherche) -->
+          <button id="leaveReviewBtn"
+              type="button"
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition"
+              title="Laisser un avis sur Google">
+            <!-- review icon -->
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#4285F4"/>
+              <path d="M12 6.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z" fill="#FFF" opacity="0.9"/>
+            </svg>
+            <span></span>
+          </button>
+
+          <p id="reviewNote" class="text-sm text-slate-600 dark:text-slate-400 md:ml-3" data-i18n="review_instructions">
+            Astuce : votre texte sera copié, puis la fenêtre d'avis Google s'ouvrira. Collez si nécessaire.
+          </p>
+        </div>
+      </form>
+
+      <!-- 📍 Google Maps Integré (responsive, with fade-up animation) -->
+      <div id="mapWrapper" 
+           class="mt-10 w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-soft border border-slate-200 dark:border-slate-700 opacity-0 transform translate-y-6 transition-all"
+           data-embed-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d397.472941077995!2d25.2022827!3d0.5156370000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1757a0da420c661f%3A0x72ab9c1e0c9f1f7c!2sHotel%20Glody!5e0!3m2!1sfr!2scd!4v1732420000000"
+           data-maps-link="https://www.google.com/maps/place/Hotel+Glody/@0.515637,25.2022827,17z"
+           data-screenshot-1="/mnt/data/Capture d’écran 2025-11-24 133619.png"
+           data-screenshot-2="/mnt/data/Capture d’écran 2025-11-24 133934.png">
+        <iframe
+          id="mapsIframe"
+          class="w-full h-full"
+          title="Localisation — Hôtel Glody, Kisangani"
+          style="border:0;"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="">
+        </iframe>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- === Minimal CSS for fade-up animation (you can merge with your CSS) === -->
+<style>
+  /* Minimal CSS for fade-up animation (merged with primary styles to avoid empty rule) */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .6s ease, transform .6s ease;
+    will-change: opacity, transform;
+  }
+  #mapWrapper.in-view {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+</style>
+
+<!-- === JavaScript: open maps, leave review (try to get place_id), copy text, animation === -->
+<script>
+(function () {
+  // --- Config: fallback maps URL (user-provided) ---
+  const mapsPageUrl = document.querySelector('#mapWrapper')?.dataset?.mapsLink ||
+                      'https://www.google.com/maps';
+
+  const embedSrc = document.querySelector('#mapWrapper')?.dataset?.embedSrc || '';
+  const iframe = document.getElementById('mapsIframe');
+
+  // load embed immediately (safe, no API key)
+  if (embedSrc) {
+    iframe.src = embedSrc;
+  }
+
+  // Buttons
+  const openMapsBtn = document.getElementById('openMapsBtn');
+  const leaveReviewBtn = document.getElementById('leaveReviewBtn');
+  const reviewText = document.getElementById('reviewText');
+
+  // Utility: open in new window with safe features
+  function safeOpen(url) {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
+
+  // Copy text to clipboard (if any)
+  function copyReviewText() {
+    const text = (reviewText && reviewText.value && reviewText.value.trim()) ? reviewText.value.trim() : '';
+    if (!text) return Promise.resolve(false);
+    return navigator.clipboard?.writeText(text).then(() => true).catch(() => false);
+  }
+
+  // Attempt to extract a place identifier from known patterns in the mapsPageUrl or embedSrc.
+  // This is a "best-effort" heuristic; if it fails, we'll fallback to a maps search page.
+  function tryExtractPlaceIdFromUrl(url) {
+    if (!url) return null;
+
+    // 1) Look for /place/.../data pattern (often contains an internal token) -> not a place_id but usable in URL
+    const placeMatch = url.match(/\/place\/([^/]+)\/@([0-9\.\-]+),([0-9\.\-]+),/);
+    if (placeMatch) {
+      // return the place name slug as fallback
+      return { type: 'slug', value: decodeURIComponent(placeMatch[1]) };
+    }
+
+    // 2) Look for the "!1s<place_token>!..." in embed pb data (common pattern)
+    const pbMatch = url.match(/!1s([^!]+)!/);
+    if (pbMatch) {
+      return { type: 'pb-token', value: pbMatch[1] };
+    }
+
+    // 3) Look for "placeid=" query param
+    const urlObj = new URL(url, location.origin);
+    if (urlObj.searchParams.has('placeid')) {
+      return { type: 'placeid', value: urlObj.searchParams.get('placeid') };
+    }
+
+    return null;
+  }
+
+  // Build a review link: prefer official write-review endpoint if we have a real place_id
+  function buildReviewUrl(placeIdOrFallback) {
+    if (!placeIdOrFallback) {
+      // fallback to Google Maps search for the business (user can click "Write a review" there)
+      const q = encodeURIComponent('Hotel Glody Kisangani');
+      return `https://www.google.com/maps/search/?api=1&query=${q}`;
+    }
+
+    if (placeIdOrFallback.type === 'placeid') {
+      return `https://search.google.com/local/writereview?placeid=${placeIdOrFallback.value}`;
+    }
+
+    // if we have a slug (like Hotel+Glody) or pb-token, use a maps search URL to the place page (good fallback)
+    if (placeIdOrFallback.type === 'slug' || placeIdOrFallback.type === 'pb-token') {
+      const name = encodeURIComponent(placeIdOrFallback.value.replace(/\+/g, ' '));
+      return `https://www.google.com/maps/search/?api=1&query=${name}`;
+    }
+
+    return `https://www.google.com/maps`;
+  }
+
+  // On click "Leave a review"
+  leaveReviewBtn.addEventListener('click', async function () {
+    // copy text first (non-blocking)
+    const copied = await copyReviewText();
+
+    // try heuristic extraction from provided links
+    const placeFromEmbed = tryExtractPlaceIdFromUrl(embedSrc) || tryExtractPlaceIdFromUrl(mapsPageUrl);
+
+    // If there's a global Google Maps JS loaded with Places library and an API key, we can try to find the place_id programmatically.
+    // This block will run only if you have previously loaded Google Maps JS with 'places' library and a valid API key on the page.
+    if (window.google && window.google.maps && window.google.maps.places) {
+      try {
+        const service = new google.maps.places.PlacesService(document.createElement('div'));
+        // use the current map page url slug or query
+        const query = placeFromEmbed?.value || 'Hotel Glody Kisangani';
+        service.findPlaceFromQuery({ query, fields: ['place_id'] }, function (results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK && results && results[0] && results[0].place_id) {
+            const reviewUrl = `https://search.google.com/local/writereview?placeid=${results[0].place_id}`;
+            safeOpen(reviewUrl);
+          } else {
+            // fallback
+            safeOpen(buildReviewUrl(placeFromEmbed));
+          }
+        });
+        return;
+      } catch (e) {
+        // continue to fallback below
+        console.warn('PlacesService lookup failed or no API key available', e);
+      }
+    }
+
+    // fallback when no Places API available
+    const fallbackUrl = buildReviewUrl(placeFromEmbed);
+    safeOpen(fallbackUrl);
+  });
+
+  // Add fade-up animation on intersection
+  function setupFadeUp() {
+    const el = document.getElementById('mapWrapper');
+    if (!el) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          el.classList.add('in-view');
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.15 });
+    observer.observe(el);
+  }
+
+  // initialize
+  document.addEventListener('DOMContentLoaded', function () {
+    setupFadeUp();
+  });
+
+  // Expose for debugging
+  window._hotelGlodyMap = {
+    embedSrc,
+    mapsPageUrl,
+    tryExtractPlaceIdFromUrl,
+    buildReviewUrl
+  };
+})();
+</script>
+
+
 
   <!-- Contact -->
   <section id="contact" class="bg-white dark:bg-gray-900 transition-colors">
@@ -891,11 +1103,6 @@
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d397.472941077995!2d25.2022827!3d0.5156370000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1757a0da420c661f%3A0x72ab9c1e0c9f1f7c!2sHotel%20Glody!5e0!3m2!1sfr!2scd!4v1732420000000">
   </iframe>
 </div>
-
-
-
-
-
       </div>
     </div>
   </section>

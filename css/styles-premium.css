@@ -1,0 +1,362 @@
+/* ========================================
+   GLODI VIP - Premium Styles
+   ======================================== */
+
+/* Performance optimizations */
+:root {
+  --duration-fast: 0.3s;
+  --duration-normal: 0.6s;
+  --duration-slow: 1s;
+  --easing-smooth: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --gold: #d4af37;
+  --champagne: #fad5a5;
+  --dark-bg: #0f0f0f;
+  --light-bg: #faf9f7;
+}
+
+/* ========================================
+   ADVANCED ANIMATIONS
+   ======================================== */
+
+@keyframes shimmer-wave {
+  0% { 
+    transform: translateX(-100%);
+  }
+  100% { 
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float-up {
+  0%, 100% { 
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: translateY(-20px) scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.8);
+  }
+}
+
+@keyframes slide-in-left {
+  from { 
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from { 
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to { 
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-up {
+  from { 
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   PREMIUM CARDS WITH ADVANCED EFFECTS
+   ======================================== */
+
+.luxury-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: all var(--duration-normal) var(--easing-smooth);
+  will-change: transform, box-shadow;
+}
+
+.luxury-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  opacity: 0;
+  transition: all var(--duration-normal) ease;
+}
+
+.luxury-card:hover::before {
+  opacity: 1;
+  top: -25%;
+  right: -25%;
+}
+
+/* ========================================
+   PREMIUM BUTTON EFFECTS
+   ======================================== */
+
+.btn-premium {
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all var(--duration-fast) var(--easing-smooth);
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width var(--duration-normal), height var(--duration-normal);
+}
+
+.btn-premium:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+/* ========================================
+   IMAGE EFFECTS
+   ======================================== */
+
+.image-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-reveal img {
+  transition: transform var(--duration-slow) var(--easing-smooth);
+  display: block;
+}
+
+.image-reveal:hover img {
+  transform: scale(1.1);
+}
+
+.image-reveal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 30%, rgba(212, 175, 55, 0.1) 50%, transparent 70%);
+  opacity: 0;
+  animation: shimmer-wave 3s infinite;
+}
+
+/* ========================================
+   TEXT EFFECTS
+   ======================================== */
+
+.text-gradient-premium {
+  background: linear-gradient(135deg, #d4af37 0%, #f0e68c 50%, #d4af37 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ========================================
+   GLASS EFFECT ENHANCED
+   ======================================== */
+
+.glass-premium {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  transition: all var(--duration-normal) ease;
+}
+
+.glass-premium:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.dark .glass-premium {
+  background: rgba(20, 20, 20, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-premium:hover {
+  background: rgba(20, 20, 20, 0.8);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+/* ========================================
+   PARALLAX ENHANCEMENTS
+   ======================================== */
+
+.parallax-section {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.parallax-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+  pointer-events: none;
+}
+
+/* ========================================
+   SCROLL ANIMATIONS
+   ======================================== */
+
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all var(--duration-slow) var(--easing-smooth);
+}
+
+.scroll-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-slide-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all var(--duration-slow) var(--easing-smooth);
+}
+
+.scroll-slide-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-slide-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all var(--duration-slow) var(--easing-smooth);
+}
+
+.scroll-slide-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ========================================
+   RESPONSIVE OPTIMIZATIONS
+   ======================================== */
+
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+
+  .lift {
+    transform: translateY(-4px);
+  }
+
+  .luxury-card {
+    border-radius: 16px;
+  }
+}
+
+/* ========================================
+   PERFORMANCE: REDUCE MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   DARK MODE OPTIMIZATIONS
+   ======================================== */
+
+.dark .shadow-luxury {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 
+              0 0 1px rgba(212, 175, 55, 0.2);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.animate-float {
+  animation: float-up 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer-wave 2s infinite;
+}
+
+.btn-hover-lift {
+  transition: all var(--duration-fast) var(--easing-smooth);
+}
+
+.btn-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   LOADING SKELETON
+   ======================================== */
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.dark .skeleton {
+  background: linear-gradient(90deg, #2d2d2d 25%, #3d3d3d 50%, #2d2d2d 75%);
+  background-size: 200% 100%;
+}

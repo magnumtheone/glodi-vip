@@ -135,21 +135,32 @@ document.addEventListener('DOMContentLoaded', function() {
   // ========================================
   
   const themeToggle = document.getElementById('themeToggle');
-  const sunIcon = document.getElementById('sunIcon');
-  const moonIcon = document.getElementById('moonIcon');
+  const sunIcon = document.getElementById('sunIcon') || document.getElementById('icon-sun');
+  const moonIcon = document.getElementById('moonIcon') || document.getElementById('icon-moon');
   const html = document.documentElement;
-  
-  // Load saved theme
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  if (savedTheme === 'dark') {
-    html.classList.add('dark');
-    updateThemeIcons('dark');
+
+  function updateThemeIcons(theme) {
+    if (!sunIcon || !moonIcon) return;
+
+    if (theme === 'dark') {
+      sunIcon.classList.add('hidden');
+      sunIcon.classList.remove('block');
+      moonIcon.classList.remove('hidden');
+      moonIcon.classList.add('block');
+    } else {
+      sunIcon.classList.remove('hidden');
+      sunIcon.classList.add('block');
+      moonIcon.classList.add('hidden');
+      moonIcon.classList.remove('block');
+    }
   }
-  
-  if (themeToggle) {
+
+  // Prevent duplicate listeners from multiple script blocks
+  if (themeToggle && !themeToggle.dataset.themeBound) {
+    themeToggle.dataset.themeBound = 'true';
     themeToggle.addEventListener('click', () => {
       const isDark = html.classList.contains('dark');
-      
+
       if (isDark) {
         html.classList.remove('dark');
         localStorage.setItem('theme', 'light');
@@ -161,15 +172,15 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-  
-  function updateThemeIcons(theme) {
-    if (theme === 'dark') {
-      sunIcon.classList.add('hidden');
-      moonIcon.classList.remove('hidden');
-    } else {
-      sunIcon.classList.remove('hidden');
-      moonIcon.classList.add('hidden');
-    }
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  if (savedTheme === 'dark') {
+    html.classList.add('dark');
+    updateThemeIcons('dark');
+  } else {
+    html.classList.remove('dark');
+    updateThemeIcons('light');
   }
 
   // ========================================

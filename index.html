@@ -1,86 +1,76 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hôtel Glodi VIP | Luxe & Excellence à Kisangani | 5 Étoiles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Hôtel Glodi VIP Kisangani | Chambres, suites & appartements de luxe</title>
+  <meta name="description" content="Hôtel Glodi VIP à Kisangani : chambres et suites raffinées, appartements haut de gamme, restaurant, salles de réception et conciergerie 24h/24. Réservez en direct au meilleur tarif." />
   <meta name="author" content="David MBULA WAWINA" />
-  <meta name="creator" content="David MBULA WAWINA" />
-  <meta name="publisher" content="David MBULA WAWINA" />
-  <meta name="description" content="Hôtel Glodi VIP à Kisangani : chambres premium, restaurant gastronomique, suites élégantes et services de concierge. Réservez votre séjour d'exception. Site conçu par David MBULA WAWINA, Développeur Full Stack et spécialiste de la communication." />
-  <meta name="keywords" content="Hôtel Glodi VIP, hôtel 5 étoiles Kisangani, chambres premium Kisangani, restaurant hôtel Kisangani, David MBULA WAWINA, Développeur Full Stack, spécialiste communication, développement web RDC, hôtel boutique Kisangani" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="theme-color" content="#111827" />
-  <meta name="application-name" content="Hôtel Glodi VIP" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#14110F" />
   <link rel="canonical" href="https://glodi-vip.com/" />
-  <meta property="og:title" content="Hôtel Glodi VIP | Luxe & Excellence à Kisangani" />
-  <meta property="og:description" content="Découvrez l'Hôtel Glodi VIP à Kisangani : chambres premium, restaurant gastronomique et services 5 étoiles." />
+
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Hôtel Glodi VIP" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Hôtel Glodi VIP Kisangani | Chambres, suites & appartements de luxe" />
+  <meta property="og:description" content="Hôtel Glodi VIP à Kisangani : chambres et suites raffinées, appartements haut de gamme, restaurant, salles de réception et conciergerie 24h/24. Réservez en direct au meilleur tarif." />
   <meta property="og:url" content="https://glodi-vip.com/" />
   <meta property="og:image" content="https://glodi-vip.com/images/og-image.jpg" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:site_name" content="Hôtel Glodi VIP" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Hôtel Glodi VIP | Luxe & Excellence à Kisangani" />
-  <meta name="twitter:description" content="Chambres élégantes, restaurant, et services premium au cœur de Kisangani." />
+  <meta name="twitter:title" content="Hôtel Glodi VIP Kisangani | Chambres, suites & appartements de luxe" />
+  <meta name="twitter:description" content="Hôtel Glodi VIP à Kisangani : chambres et suites raffinées, appartements haut de gamme, restaurant, salles de réception et conciergerie 24h/24. Réservez en direct au meilleur tarif." />
   <meta name="twitter:image" content="https://glodi-vip.com/images/og-image.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/png" href="apparts/Capture d'écran 2025-11-10 001341.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
+  <!-- Thème appliqué avant l'affichage (évite le flash) -->
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: { 
-            display: ['"Space Grotesk"', 'sans-serif'],
-            sans: ['"Space Grotesk"', 'sans-serif'],
-          },
-          colors: {
-            primary: {
-              50:'#fbf8f4', 100:'#f6efe8', 200:'#efe0d1', 300:'#e6ccb5',
-              400:'#dcb99b', 500:'#d0a581', 600:'#b7886a', 700:'#926b55',
-              800:'#6f5242', 900:'#4e3a30'
-            },
-            accent: '#fbbf24',
-            gold: { 50: '#fffbf0', 100: '#fef3e2', 500: '#fbbf24', 700: '#b45309' }
-          },
-          boxShadow: { 
-            soft: '0 12px 36px -12px rgba(0,0,0,.18)',
-            luxury: '0 40px 80px -15px rgba(251, 191, 36, 0.2)',
-          },
-          animation: {
-            'float': 'float 20s ease-in-out infinite',
-            'pulse-glow': 'pulse-glow 2s infinite',
-            'shimmer': 'shimmer 3s infinite',
-          }
-        }
-      }
-    }
+    (function () {
+      var d = document.documentElement, t = null;
+      d.classList.add('js');
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) d.classList.add('dark');
+    })();
   </script>
 
-  <!-- Structured data (LocalBusiness) -->
-<script type="application/ld+json">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="images/amb.jpg" fetchpriority="high" />
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css" />
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Hotel",
+  "@id": "https://glodi-vip.com/#hotel",
   "name": "Hôtel Glodi VIP",
   "url": "https://glodi-vip.com/",
   "logo": "https://glodi-vip.com/images/logo.png",
-  "image": ["https://glodi-vip.com/images/og-image.jpg"],
-  "description": "Hôtel Glodi VIP à Kisangani : chambres élégantes, restaurant gastronomique et salles de conférence.",
+  "image": [
+    "https://glodi-vip.com/images/og-image.jpg",
+    "https://glodi-vip.com/images/facade.jpg",
+    "https://glodi-vip.com/images/executive.jpg"
+  ],
+  "description": "Hôtel Glodi VIP à Kisangani : chambres et suites, appartements haut de gamme, restaurant, salles de réception et espaces professionnels.",
   "telephone": "+243820600712",
   "email": "reservation@glodi-vip.com",
+  "priceRange": "$30 - $170",
+  "currenciesAccepted": "USD",
+  "starRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Avenue Kitima N°2, Quartier Plateau Boyoma",
-    "addressLocality": "Makiso, Kisangani",
+    "addressLocality": "Kisangani",
     "addressRegion": "Tshopo",
-    "postalCode": "",
     "addressCountry": "CD"
   },
   "geo": {
@@ -88,1215 +78,1124 @@
     "latitude": 0.5187828995127064,
     "longitude": 25.196563074991364
   },
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=0.5187829,25.1965631",
+  "openingHours": "Mo-Su 00:00-23:59",
+  "checkinTime": "14:00",
+  "checkoutTime": "12:00",
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Wi-Fi gratuit",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Parking privé",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Restaurant",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Bar",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Réception 24h/24",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Salles de réunion",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Climatisation",
+      "value": true
+    }
+  ],
   "sameAs": [
-    "https://www.facebook.com",
-    "https://www.instagram.com",
     "https://wa.me/243820600712"
   ],
-  "openingHours": "Mo-Su 00:00-23:59",
   "creator": {
     "@type": "Person",
     "name": "David MBULA WAWINA",
-    "jobTitle": "Développeur Full Stack & Spécialiste de la communication",
     "url": "https://davidwawina.site"
   }
 }
-</script>
-
-<script type="application/ld+json">
+  </script>
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "David MBULA WAWINA",
-  "jobTitle": "Développeur Full Stack et Spécialiste de la communication",
-  "url": "https://davidwawina.site",
-  "sameAs": [
-    "https://www.linkedin.com",
-    "https://www.facebook.com",
-    "https://wa.me/243820600712"
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Comment réserver une chambre ou un appartement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Par WhatsApp, par téléphone au +243 820 600 712 ou via le formulaire de réservation de ce site. Notre réception vous confirme la disponibilité et le tarif très rapidement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les horaires d'arrivée et de départ ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les chambres sont disponibles à partir de 14h le jour d'arrivée et doivent être libérées avant 12h le jour du départ. Une arrivée anticipée ou un départ tardif peuvent être accordés selon disponibilité."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Proposez-vous des séjours longue durée ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Nos appartements se louent à la nuit ou au mois : Studio Urbain dès 1 000 $/mois, Appartement VIP dès 1 500 $/mois et Appartement Deluxe dès 1 700 $/mois."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le Wi-Fi et le parking sont-ils inclus ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le Wi-Fi haut débit est inclus dans toutes nos chambres et nos appartements. Un parking privé et sécurisé est à la disposition de nos clients dans l'enceinte de l'hôtel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Peut-on organiser une réunion ou un événement ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bien sûr. Nos 8 salles de réception accueillent réunions, séminaires, conférences et célébrations, avec service traiteur sur demande. Contactez-nous pour un devis personnalisé."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Où se trouve l'hôtel ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Avenue Kitima N°2, Quartier Plateau Boyoma, commune de Makiso, à Kisangani (Tshopo, RDC). Le plan d'accès est disponible en bas de cette page."
+      }
+    }
   ]
 }
-</script>
-
-  <style>
-    /* === ANIMATIONS DE PRESTIGE === */
-    @keyframes float { 
-      0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
-      50% { transform: translateY(-60px) scale(1.2); opacity: 1; }
-    }
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.4); }
-      50% { box-shadow: 0 0 0 20px rgba(251, 191, 36, 0); }
-    }
-    @keyframes shimmer {
-      0% { background-position: -1000px 0; }
-      100% { background-position: 1000px 0; }
-    }
-    @keyframes shine {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(200%); }
-    }
-    @keyframes slideInLeft { 
-      from { opacity: 0; transform: translateX(-60px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes slideInRight { 
-      from { opacity: 0; transform: translateX(60px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes slideUp { 
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* === RESET & RESET === */
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { max-width: 100%; overflow-x: hidden; }
-    img, video, svg, iframe { max-width: 100%; height: auto; display: block; }
-    html { scroll-behavior: smooth; }
-    body, body * {
-      font-family: 'Space Grotesk', sans-serif !important;
-    }
-    h1, h2, h3, h4, h5, h6, .font-display {
-      font-family: 'Space Grotesk', sans-serif !important;
-    }
-
-    /* === FADE-UP ANIMATIONS === */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      transition-delay: var(--delay, 0s);
-      will-change: opacity, transform;
-    }
-    .fade-up.in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* === GLASS MORPHISM === */
-    .glass {
-      backdrop-filter: saturate(200%) blur(20px);
-      background: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    .dark .glass {
-      background: rgba(17, 24, 39, 0.8);
-      border-color: rgba(255, 255, 255, 0.1);
-    }
-
-    /* === HERO BOKEH EFFECT === */
-    .gold-bubbles {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-      z-index: 0;
-      pointer-events: none;
-    }
-    .bubble {
-      position: absolute;
-      border-radius: 50%;
-      background: radial-gradient(circle at 35% 35%, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0.1) 50%, transparent 70%);
-      filter: blur(40px);
-      animation: float 20s ease-in-out infinite;
-    }
-    .bubble:nth-child(1) {
-      width: 400px;
-      height: 400px;
-      top: 10%;
-      left: -5%;
-      animation-delay: 0s;
-    }
-    .bubble:nth-child(2) {
-      width: 350px;
-      height: 350px;
-      top: 50%;
-      right: -10%;
-      animation-delay: 5s;
-    }
-    .bubble:nth-child(3) {
-      width: 300px;
-      height: 300px;
-      top: 35%;
-      left: 30%;
-      animation-delay: 10s;
-    }
-    .light .bubble {
-      opacity: 0.25;
-    }
-
-    /* === GOLD TITLE PRESTIGE === */
-    .gold-title {
-      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #f59e0b 75%, #fbbf24 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-size: 200% 200%;
-      position: relative;
-      overflow: hidden;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-    }
-    .gold-title::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.8) 20%, transparent 40%);
-      transform: translateX(-100%);
-      animation: shine 4s infinite;
-      pointer-events: none;
-    }
-
-    /* === CARD HOVER EFFECTS === */
-    .card-hover {
-      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-      position: relative;
-    }
-    .card-hover:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 30px 80px -10px rgba(251, 191, 36, 0.25);
-    }
-    .card-hover::before {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      background: linear-gradient(135deg, transparent, rgba(251, 191, 36, 0.1), transparent);
-      border-radius: inherit;
-      z-index: -1;
-    }
-
-    /* === ELEGANT BUTTONS === */
-    .btn-prestige {
-      position: relative;
-      overflow: hidden;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      transition: all 0.3s ease;
-    }
-    .btn-prestige::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2), transparent 70%);
-      transform: translateX(-100%);
-      transition: transform 0.5s;
-    }
-    .btn-prestige:hover::before {
-      transform: translateX(100%);
-    }
-
-    /* === IMAGE HOVER === */
-    .img-zoom {
-      overflow: hidden;
-      border-radius: 1rem;
-    }
-    .img-zoom img {
-      transition: transform 0.6s cubic-bezier(0.33, 0.66, 0.66, 1);
-    }
-    .img-zoom:hover img {
-      transform: scale(1.08);
-    }
-
-    /* === SEPARATOR WITH ELEGANCE === */
-    .separator {
-      position: relative;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.5), transparent);
-      margin: 3rem 0;
-    }
-
-    /* === TESTIMONIAL CARDS === */
-    .testimonial-card {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(251, 191, 36, 0.05) 100%);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(251, 191, 36, 0.2);
-      border-radius: 1.5rem;
-      padding: 2rem;
-      transition: all 0.4s ease;
-    }
-    .testimonial-card:hover {
-      border-color: rgba(251, 191, 36, 0.5);
-      box-shadow: 0 20px 50px rgba(251, 191, 36, 0.15);
-      transform: translateY(-8px);
-    }
-
-    .testimonial-carousel {
-      overflow: hidden;
-      margin: 0 calc(-1rem);
-      padding: 1rem 0;
-    }
-    .testimonial-slider {
-      display: flex;
-      align-items: stretch;
-      width: max-content;
-      animation: testimonial-scroll 28s linear infinite;
-      will-change: transform;
-    }
-    .testimonial-slider:hover {
-      animation-play-state: paused;
-    }
-    .testimonial-carousel .testimonial-card {
-      flex: 0 0 30rem;
-      min-width: 30rem;
-      margin-right: 2rem;
-    }
-    .testimonial-carousel .testimonial-card:last-child {
-      margin-right: 0;
-    }
-    @media (max-width: 767px) {
-      .testimonial-carousel {
-        margin: 0 -0.75rem;
-      }
-      .testimonial-carousel .testimonial-slider {
-        animation-duration: 32s;
-      }
-      .testimonial-carousel .testimonial-card {
-        flex: 0 0 min(90vw, 26rem);
-        min-width: min(90vw, 26rem);
-        margin-right: 1rem;
-      }
-    }
-    @keyframes testimonial-scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    /* === DARK MODE === */
-    .dark body {
-      background: #0a0e27;
-      color: #e5e7eb;
-    }
-    .dark .shadow-soft {
-      box-shadow: 0 12px 36px -12px rgba(255, 255, 255, 0.08);
-    }
-
-    /* === CAROUSEL  === */
-    .carousel-container {
-      position: relative;
-      overflow: hidden;
-      height: 100%;
-    }
-    .carousel-slides {
-      display: flex;
-      transition: transform 0.3s ease;
-      height: 100%;
-    }
-    .carousel-slides img {
-      flex: 0 0 100%;
-    }
-    .carousel-dots button.active {
-      background-color: white;
-    }
-  </style>
+  </script>
 </head>
+<body id="top">
+  <!-- Icônes (dérivées de Lucide, licence ISC) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <defs>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h18M3 16h18"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+      <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-bed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16M2 8h18a2 2 0 0 1 2 2v10M2 17h20M6 8v9"/></symbol>
+      <symbol id="i-bath" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5M10 5 8 7M2 12h20M7 19v2M17 19v2"/></symbol>
+      <symbol id="i-snow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2v20M20 16l-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4"/></symbol>
+      <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h.01M2 8.82a15 15 0 0 1 20 0M5 12.86a10 10 0 0 1 14 0M8.5 16.43a5 5 0 0 1 7 0"/></symbol>
+      <symbol id="i-tv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="15" x="2" y="7" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
+      <symbol id="i-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 19h20M4 19v-1a8 8 0 0 1 16 0v1M12 10V7M10 7h4"/></symbol>
+      <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+      <symbol id="i-chef" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></symbol>
+      <symbol id="i-sofa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/><path d="M4 18v2M20 18v2"/></symbol>
+      <symbol id="i-wine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8M7 10h10M12 15v7M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-quote" viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></symbol>
+      <symbol id="i-warehouse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"/><path d="M6 18h12M6 14h12"/><rect width="12" height="12" x="6" y="10"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+      <symbol id="i-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+      <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+      <symbol id="i-mountain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></symbol>
+      <symbol id="i-droplet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></symbol>
+      <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17v4M17 19h4"/></symbol>
+      <symbol id="i-login" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></symbol>
+      <symbol id="i-logo" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30.5" fill="none" stroke="#B08D57" stroke-width="1.2"/><circle cx="32" cy="32" r="26.5" fill="none" stroke="#B08D57" stroke-width=".6" opacity=".7"/><text x="32" y="40.5" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="600" fill="#B08D57" letter-spacing="1">GV</text><path d="M32 9.5l1.1 2.2 2.4.35-1.75 1.7.4 2.4L32 15l-2.15 1.15.4-2.4-1.75-1.7 2.4-.35z" fill="#B08D57"/></symbol>
+    </defs>
+  </svg>
+  <a href="#contenu" class="skip-link">Aller au contenu</a>
 
-<body class="bg-white dark:bg-gray-900 text-slate-800 dark:text-white antialiased">
-
-  <!-- === TOP BAR PRESTIGE === -->
-  <div class="hidden md:block bg-gradient-to-r from-primary-900 to-primary-800 text-primary-50 text-sm shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-8">
-        <span class="inline-flex items-center gap-2 opacity-90 hover:opacity-100 transition-opacity">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-          </svg>
-          <span>Avenue Kitima N°2, Quartier Plateau Boyoma, Makiso, Kisangani, RDC</span>
-        </span>
-        
-        <a href="tel:+243820600712" class="inline-flex items-center gap-2 hover:text-accent transition-colors">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-          </svg>
-          +243 820600712
-        </a>
-        
-        <a href="mailto:reservation@glodi-vip.com" class="inline-flex items-center gap-2 hover:text-accent transition-colors">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-          </svg>
-          reservation@glodi-vip.com
-        </a>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <button id="lang-fr" class="px-3 py-1 rounded-full hover:bg-white/20 font-medium transition-colors">FR</button>
-        <div class="h-4 w-px bg-white/20"></div>
-        <button id="lang-en" class="px-3 py-1 rounded-full hover:bg-white/20 font-medium transition-colors">EN</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- === HEADER STICKY === -->
-  <header class="sticky top-0 z-40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-700 shadow-lg transition-all">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between py-4">
-        <a href="#" class="flex items-center gap-3 group">
-          <svg class="h-12 w-12 rounded-full ring-2 ring-gold-500 shadow-lg group-hover:ring-accent/50 transition-all" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g_grad" x1="0" x2="1" y1="0" y2="1">
-                <stop offset="0%" stop-color="#fbbf24"/>
-                <stop offset="50%" stop-color="#f59e0b"/>
-                <stop offset="100%" stop-color="#d97706"/>
-              </linearGradient>
-              <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.15"/>
-              </filter>
-            </defs>
-            <circle cx="32" cy="32" r="30" fill="url(#g_grad)" filter="url(#soft)"/>
-            <g fill="#fff" font-family="'Playfair Display', serif" font-weight="900" text-anchor="middle" font-size="20">
-              <text x="32" y="33">HGV</text>
-            </g>
-          </svg>
-          <div>
-            <span class="font-black tracking-tight text-xl text-primary-900 dark:text-white group-hover:text-accent transition">Glodi VIP</span>
-            <span class="block text-xs text-slate-500 dark:text-slate-400 font-light">5 ÉTOILES</span>
-          </div>
-        </a>
-
-        <nav class="hidden lg:flex items-center gap-10 font-medium">
-          <a href="#chambres" class="hover:text-primary-700 dark:hover:text-accent transition-colors relative group">
-            Chambres
-            <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
-          </a>
-          <a href="#appartements" class="hover:text-primary-700 dark:hover:text-accent transition-colors relative group">
-            Appartements
-            <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
-          </a>
-          <a href="#experiences" class="hover:text-primary-700 dark:hover:text-accent transition-colors relative group">
-            Expériences
-            <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
-          </a>
-          <a href="#restaurant" class="hover:text-primary-700 dark:hover:text-accent transition-colors relative group">
-            Restaurant
-            <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
-          </a>
-          <a href="#galerie" class="hover:text-primary-700 dark:hover:text-accent transition-colors relative group">
-            Galerie
-            <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
-          </a>
-          <a href="#contact" class="hover:text-primary-700 dark:hover:text-accent transition-colors relative group">
-            Contact
-            <span class="absolute -bottom-2 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
-          </a>
-        </nav>
-
-        <div class="flex items-center gap-3">
-          <a href="#contact" class="hidden md:inline-flex px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary-700 to-primary-800 text-white hover:shadow-lg dark:from-accent dark:to-yellow-500 transition-all btn-prestige">
-            Réserver maintenant
-          </a>
-          <button id="themeToggle" type="button" aria-label="Changer le thème" class="p-2 rounded-lg border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-            <svg id="sunIcon" class="hidden h-5 w-5 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="4.2"></circle>
-              <path d="M12 2.5v2.2M12 19.3v2.2M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"></path>
-            </svg>
-            <svg id="moonIcon" class="block h-5 w-5 text-slate-700 dark:text-slate-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 12.8A8.8 8.8 0 0 1 11.2 3a8.8 8.8 0 1 0 9.8 9.8Z"></path>
-            </svg>
-          </button>
-          <button id="menuBtn" aria-controls="mobileMenu" aria-expanded="false" class="lg:hidden p-2 rounded-lg border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition" aria-label="Ouvrir le menu">☰</button>
+  <!-- ===== EN-TÊTE ===== -->
+  <header class="site-header is-overlay">
+    <div class="topbar hidden lg:block">
+      <div class="container-site flex items-center justify-between gap-6 py-2.5">
+        <p class="flex items-center gap-2 opacity-90">
+          <svg class="w-4 h-4 text-gold" aria-hidden="true"><use href="#i-pin"/></svg>
+          Avenue Kitima N°2, Plateau Boyoma, Makiso — Kisangani, RDC
+        </p>
+        <div class="flex items-center gap-6">
+          <a href="tel:+243820600712" class="flex items-center gap-2 transition-colors"><svg class="w-4 h-4 text-gold" aria-hidden="true"><use href="#i-phone"/></svg>+243 820 600 712</a>
+          <a href="mailto:reservation@glodi-vip.com" class="flex items-center gap-2 transition-colors"><svg class="w-4 h-4 text-gold" aria-hidden="true"><use href="#i-mail"/></svg>reservation@glodi-vip.com</a>
+          <span class="flex items-center gap-2 opacity-90"><svg class="w-4 h-4 text-gold" aria-hidden="true"><use href="#i-clock"/></svg>Réception 24h/24</span>
         </div>
       </div>
+    </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="lg:hidden hidden border-t border-slate-200 dark:border-slate-700 pb-3">
-        <nav class="flex flex-col gap-2 pt-3">
-          <a href="#chambres" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">Chambres</a>
-          <a href="#appartements" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">Appartements</a>
-          <a href="#experiences" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">Expériences</a>
-          <a href="#restaurant" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">Restaurant</a>
-          <a href="#galerie" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">Galerie</a>
-          <a href="#contact" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">Contact</a>
-        </nav>
+    <div class="container-site flex items-center justify-between gap-4 h-[76px]">
+      <a href="#top" class="flex items-center gap-3" aria-label="Hôtel Glodi VIP — accueil">
+        <svg class="brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+        <span class="flex flex-col">
+          <span class="brand-name">Glodi VIP</span>
+          <span class="brand-sub">Hôtel <span class="stars" aria-label="5 étoiles"><svg aria-hidden="true" style="width:8px;height:8px"><use href="#i-star"/></svg><svg aria-hidden="true" style="width:8px;height:8px"><use href="#i-star"/></svg><svg aria-hidden="true" style="width:8px;height:8px"><use href="#i-star"/></svg><svg aria-hidden="true" style="width:8px;height:8px"><use href="#i-star"/></svg><svg aria-hidden="true" style="width:8px;height:8px"><use href="#i-star"/></svg></span> Kisangani</span>
+        </span>
+      </a>
+
+      <nav class="hidden xl:flex items-center gap-8" aria-label="Navigation principale">
+        <a href="#hotel" class="nav-link">L'hôtel</a>
+        <a href="#chambres" class="nav-link">Chambres</a>
+        <a href="#appartements" class="nav-link">Appartements</a>
+        <a href="#restaurant" class="nav-link">Restaurant</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#galerie" class="nav-link">Galerie</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="#contact" class="btn btn-gold btn-sm hidden sm:inline-flex">Réserver</a>
+        <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Activer le thème sombre">
+          <svg class="theme-icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          <svg class="theme-icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <button type="button" class="icon-btn xl:hidden" data-menu-open aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu">
+          <svg aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- === HERO PRESTIGE === -->
-  <section class="relative overflow-hidden min-h-[70vh] md:min-h-screen flex items-center">
-    <div class="absolute inset-0">
-      <img src="images/facade.jpg" alt="Hôtel Glodi VIP Kisangani" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-black/45"></div>
-      <div class="gold-bubbles">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-      </div>
+  <!-- ===== MENU MOBILE ===== -->
+  <div id="mobileMenu" class="mobile-menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="flex items-center justify-between h-[52px]">
+      <span class="brand-name text-[#E3C894]">Glodi VIP</span>
+      <button type="button" class="icon-btn" style="border-color:rgba(255,255,255,.3)" data-menu-close aria-label="Fermer le menu">
+        <svg aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
     </div>
-
-    <div class="relative max-w-7xl mx-auto px-4 w-full z-10">
-      <div class="max-w-3xl space-y-6 fade-up">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-xs sm:text-sm">
-          <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-          EXPÉRIENCE PRESTIGE
-        </div>
-
-        <h1 class="text-4xl sm:text-5xl md:text-7xl font-black leading-tight text-white font-display">
-          L'Art du Luxe à <span class="gold-title">Kisangani</span>
-        </h1>
-
-        <p class="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl leading-relaxed">
-          Bienvenue à l'Hôtel Glodi VIP — Où élégance, confort absolu et raffinement créent une expérience inoubliable.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-4 pt-6">
-          <a href="#contact" class="px-6 py-3 sm:px-7 sm:py-4 rounded-xl bg-white text-slate-900 font-bold shadow-2xl hover:shadow-xl hover:-translate-y-1 transition-all btn-prestige text-center">
-            Réserver votre séjour
-          </a>
-          <a href="#chambres" class="px-6 py-3 sm:px-7 sm:py-4 rounded-xl bg-white/10 text-white ring-2 ring-white/30 hover:bg-white/20 transition-all text-center font-bold">
-            Découvrir les chambres
-          </a>
-        </div>
-
-        <div class="flex flex-wrap gap-8 pt-8">
-          <div class="flex items-center gap-3">
-            <div class="p-3 rounded-full bg-white/10 backdrop-blur">
-              <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            <span class="text-white font-semibold">Service 5 étoiles</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="p-3 rounded-full bg-white/10 backdrop-blur">
-              <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            <span class="text-white font-semibold">Localisation privilégiée</span>
-          </div>
-        </div>
-      </div>
+    <nav class="mt-8" aria-label="Navigation mobile">
+      <a href="#hotel">L'hôtel</a>
+      <a href="#chambres">Chambres &amp; suites</a>
+      <a href="#appartements">Appartements</a>
+      <a href="#restaurant">Restaurant</a>
+      <a href="#services">Services</a>
+      <a href="#entrepots">Espaces professionnels</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="mt-auto pt-10 space-y-3">
+      <a href="#contact" class="btn btn-gold btn-block">Réserver votre séjour</a>
+      <a href="https://wa.me/243820600712" target="_blank" rel="noopener" class="btn btn-light btn-block"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+      <p class="text-sm text-white/60 pt-4">Avenue Kitima N°2, Kisangani · <a href="tel:+243820600712" class="underline-offset-4 hover:underline">+243 820 600 712</a></p>
     </div>
-  </section>
+  </div>
 
-  <!-- === SECTION STATS === -->
-  <section class="bg-white dark:bg-gray-800 py-16">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div class="text-center fade-up">
-          <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-accent bg-clip-text text-transparent">45+</div>
-          <p class="text-slate-600 dark:text-slate-400 mt-2 font-medium">Chambres & suites</p>
-        </div>
-        <div class="text-center fade-up" style="--delay: 0.1s;">
-          <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-accent bg-clip-text text-transparent">24/7</div>
-          <p class="text-slate-600 dark:text-slate-400 mt-2 font-medium">Concierge</p>
-        </div>
-        <div class="text-center fade-up" style="--delay: 0.2s;">
-          <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-accent bg-clip-text text-transparent">8</div>
-          <p class="text-slate-600 dark:text-slate-400 mt-2 font-medium">Salles de réception</p>
-        </div>
-        <div class="text-center fade-up" style="--delay: 0.3s;">
-          <div class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary-600 to-accent bg-clip-text text-transparent">★★★★★</div>
-          <p class="text-slate-600 dark:text-slate-400 mt-2 font-medium">Classement</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <main id="contenu">
 
-  <!-- === CHAMBRES SECTION === -->
-  <section id="chambres" class="bg-gradient-to-b from-white to-primary-50 dark:from-gray-900 dark:to-gray-800 py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-16 fade-up">
-        <h2 class="text-5xl md:text-6xl font-black font-display mb-4">
-          Nos <span class="gold-title">Chambres & Suites</span>
-        </h2>
-        <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-          Chaque espace a été conçu pour offrir confort, luxe et tranquillité
-        </p>
+    <!-- ===== HERO ===== -->
+    <section class="hero" data-hero aria-label="Bienvenue à l'Hôtel Glodi VIP">
+      <div class="hero-media">
+        <img src="images/amb.jpg" alt="Façade illuminée de l'Hôtel Glodi VIP à Kisangani, de nuit" width="2048" height="1364" fetchpriority="high" decoding="async" />
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- CHAMBRE CLASSIQUE -->
-        <article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-soft border border-slate-200 dark:border-slate-700 card-hover fade-up">
-          <div class="relative h-64 overflow-hidden img-zoom">
-            <img src="apparts/litcanon.jpg" alt="Chambre Classique - Hôtel Glodi VIP" class="w-full h-full object-cover" />
-            <span class="absolute top-4 right-4 px-4 py-2 bg-white/90 dark:bg-black/60 rounded-full text-sm font-bold text-accent">À partir de 30$</span>
-          </div>
-          <div class="p-7 space-y-4">
-            <h3 class="text-2xl font-bold font-display">Chambre Classique</h3>
-            <p class="text-slate-600 dark:text-slate-400">Lit queen, douche moderne, bureau ergonomique, climatisation, Wi-Fi et vue dégagée.</p>
-            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Chauffage & climatisation
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Safe et minibar
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Service limousine disponible
-              </li>
-            </ul>
-            <div class="flex gap-3 pt-4">
-              <a href="#contact" class="flex-1 px-4 py-2.5 rounded-lg bg-primary-700 text-white font-semibold hover:bg-primary-800 transition text-center">Réserver</a>
-              <a href="https://wa.me/243820600712" class="px-4 py-2.5 rounded-lg bg-green-500 text-white hover:bg-green-600 transition">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.91 11.91 0 0012 0C5.373 0 0 5.373 0 12c0 2.115.553 4.084 1.6 5.84L0 24l6.36-1.66A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.2-1.248-6.197-3.48-8.52z"/></svg>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- SUITE EXÉCUTIVE -->
-        <article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-soft border border-slate-200 dark:border-slate-700 card-hover fade-up" style="--delay: 0.1s;">
-          <div class="relative h-64 overflow-hidden img-zoom">
-            <img src="images/executive.jpg" alt="Suite Exécutive - Hôtel Glodi VIP" class="w-full h-full object-cover" />
-            <span class="absolute top-4 right-4 px-4 py-2 bg-white/90 dark:bg-black/60 rounded-full text-sm font-bold text-accent">À partir de 50$</span>
-            <span class="absolute top-4 left-4 px-3 py-1 bg-accent text-black text-xs font-bold rounded-full">PREMIUM</span>
-          </div>
-          <div class="p-7 space-y-4">
-            <h3 class="text-2xl font-bold font-display">Suite Exécutive</h3>
-            <p class="text-slate-600 dark:text-slate-400">Espace salon séparé, baignoire avec jets, balcon privé, lounge accès et télévision cinéma 4K.</p>
-            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Espace salon exclusif
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Waters minérales & produits luxe
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Butler service disponible
-              </li>
-            </ul>
-            <div class="flex gap-3 pt-4">
-              <a href="#contact" class="flex-1 px-4 py-2.5 rounded-lg bg-accent text-black font-semibold hover:bg-yellow-400 transition text-center">Réserver</a>
-              <a href="https://wa.me/243820600712" class="px-4 py-2.5 rounded-lg bg-green-500 text-white hover:bg-green-600 transition">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.91 11.91 0 0012 0C5.373 0 0 5.373 0 12c0 2.115.553 4.084 1.6 5.84L0 24l6.36-1.66A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.2-1.248-6.197-3.48-8.52z"/></svg>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- CHAMBRE FAMILIALE -->
-        <article class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-soft border border-slate-200 dark:border-slate-700 card-hover fade-up" style="--delay: 0.2s;">
-          <div class="relative h-64 overflow-hidden img-zoom">
-            <img src="apparts/lithote.jpg" alt="Chambre Familiale - Hôtel Glodi VIP" class="w-full h-full object-cover" />
-            <span class="absolute top-4 right-4 px-4 py-2 bg-white/90 dark:bg-black/60 rounded-full text-sm font-bold text-accent">À partir de 70$</span>
-          </div>
-          <div class="p-7 space-y-4">
-            <h3 class="text-2xl font-bold font-display">Chambre Familiale</h3>
-            <p class="text-slate-600 dark:text-slate-400">2 lits doubles, canapé-lit, espace jeux, kitchenette et terrasse avec vue panoramique.</p>
-            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Lit bébé sur demande
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Kitchenette équipée
-              </li>
-              <li class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Salon d'accueil
-              </li>
-            </ul>
-            <div class="flex gap-3 pt-4">
-              <a href="#contact" class="flex-1 px-4 py-2.5 rounded-lg bg-primary-700 text-white font-semibold hover:bg-primary-800 transition text-center">Réserver</a>
-              <a href="https://wa.me/243820600712" class="px-4 py-2.5 rounded-lg bg-green-500 text-white hover:bg-green-600 transition">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.91 11.91 0 0012 0C5.373 0 0 5.373 0 12c0 2.115.553 4.084 1.6 5.84L0 24l6.36-1.66A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.2-1.248-6.197-3.48-8.52z"/></svg>
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Appartements -->
-          <section id="appartements" class="bg-primary-50 dark:bg-gray-800 transition-colors">
-            <div class="max-w-7xl mx-auto px-4 py-16">
-              
-              <!-- Titre -->
-              <div class="flex items-end justify-between mb-10 fade-up">
-                <div class="max-w-3xl">
-                  <h2 class="text-5xl md:text-6xl font-black font-display mb-4 gold-title">
-                    Appartements à louer
-                  </h2>
-                  <p class="text-xl text-slate-600 dark:text-slate-400">
-                    Découvrez nos appartements haut de gamme à Kisangani — confort, sécurité et modernité.
-                  </p>
-                </div>
-                <a href="tel:+243824322239" title="Demander une visite aux appartements"
-                  class="hidden md:inline-flex px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-600 hover:border-yellow-400 hover:text-yellow-400 transition font-medium">
-                  Demander une visite
-                </a>
-              </div>
-
-              <!-- Grille -->
-              <div class="grid md:grid-cols-3 gap-8">
-
-                <!-- Carte d'appartement -->
-                <article class="relative group overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-soft card-hover fade-up transition transform hover:-translate-y-1 hover:shadow-lg">
-                  <!-- Galerie d'images -->
-                  <div class="relative h-56 overflow-hidden" alt="Des photos de nos appartements VIP">
-                    <img src="images/appart1.jpg" alt="Appartement VIP"
-                        class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000 ease-in-out slide">
-                    <img src="apparts/appartvip.jpg" alt="Appartement VIP intérieur"
-                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in-out slide">
-                    <img src="apparts/appartsvip3.jpg" alt="Appartement VIP cuisine"
-                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in-out slide">
-                  </div>
-
-                  <!-- Contenu -->
-                  <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold font-display">Appartement VIP</h3>
-                    <p class="text-slate-600 dark:text-slate-400" alt="avanatges des appartements VIP">
-                      2 chambres, salon moderne, cuisine équipée, balcon, Wi-Fi et sécurité 24h/24.
-                    </p>
-                    <div class="flex items-center justify-between pt-2" alt="prix des appartements VIP">
-                      <span class="font-semibold text-yellow-500">150 $/nuit – 1500 $/mois</span>
-                    </div>
-                    <div class="flex gap-3 pt-3">
-                      <a href="tel:+243824322239" alt="Réserver un appartement VIP" class="px-3 py-1.5 rounded-lg bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition">Réserver</a>
-                      <a href="pages/appartements1.html" Title=" En savoir plus sur nos appartements VIP" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-500 transition">En savoir plus</a>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Appartement 2 -->
-                <article class="relative group overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-soft card-hover fade-up transition transform hover:-translate-y-1 hover:shadow-lg" style="--delay: 0.1s;">
-                  <div class="relative h-56 overflow-hidden">
-                    <img src="images/app.jpg" alt="Appartement Deluxe"
-                        class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000 ease-in-out slide">
-                    <img src="apparts/deluxe2.jpg" alt="Appartement Deluxe intérieur"
-                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in-out slide">
-                    <img src="apparts/deluxe.jpg" alt="Appartement Deluxe balcon"
-                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in-out slide">
-                  </div>
-
-                  <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold font-display">Appartement Deluxe</h3>
-                    <p class="text-slate-600 dark:text-slate-400" alt="avantages des appartements Deluxe">
-                      3 chambres spacieuses, cuisine ouverte, climatisation, smart TV et espace bureau.
-                    </p>
-                    <div class="flex items-center justify-between pt-2" alt="prix des appartements Deluxe">
-                      <span class="font-semibold text-yellow-500">170 $/nuit – 1700 $/mois</span>
-                    </div>
-                    <div class="flex gap-3 pt-3">
-                      <a href="tel:+243824322239" class="px-3 py-1.5 rounded-lg bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition">Réserver</a>
-                      <a href="pages/appartements2.html" title=" En savoir plus sur nos appartements Deluxe" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-500 transition">En savoir plus</a>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Appartement 3 -->
-                <article class="relative group overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-soft card-hover fade-up transition transform hover:-translate-y-1 hover:shadow-lg" style="--delay: 0.2s;">
-                  <div class="relative h-56 overflow-hidden">
-                    <img src="images/IMG-20251029-WA0032(1).jpg" alt="Studio Urbain"
-                        class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000 ease-in-out slide">
-                    <img src="apparts/panora.jpg" alt="Studio Urbain kitchenette"
-                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in-out slide">
-                    <img src="apparts/studio.jpg" alt="Studio Urbain salle"
-                        class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in-out slide">
-                  </div>
-
-                  <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold font-display">Studio Urbain</h3>
-                    <p class="text-slate-600 dark:text-slate-400" alt="avantages des Studio Urbains">
-                      Idéal pour étudiants ou cadres, kitchenette, Wi-Fi et vue panoramique.
-                    </p>
-                    <div class="flex items-center justify-between pt-2" alt="prix des Studios Urbains">
-                      <span class="font-semibold text-yellow-500">100 $/nuit – 1000 $/mois</span>
-                    </div>
-                    <div class="flex gap-3 pt-3">
-                      <a href="tel:+243824322239" class="px-3 py-1.5 rounded-lg bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition">Réserver</a>
-                      <a href="pages/appartements3.html" title=" En savoir plus sur nos Studios Urbains" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-500 transition">En savoir plus</a>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </section>
-  
-          <!-- Entrepôts -->
-      <section id="entrepots" class="bg-primary-50 dark:bg-gray-800 transition-colors" alt="Entrepôts & Espaces professionnels à louer à Kisangani - Glodi VIP Kisangani">
-        <div class="max-w-7xl mx-auto px-4 py-16">
-          <div class="flex items-end justify-between mb-10 fade-up">
-            <div class="max-w-3xl">
-              <h2 class="text-5xl md:text-6xl font-black font-display mb-4 gold-title" data-i18n="warehouses_title">Entrepôts & Espaces professionnels</h2>
-              <p class="text-xl text-slate-600 dark:text-slate-400 mt-2" data-i18n="warehouses_sub">
-                Des espaces sécurisés, modulables et adaptés à vos besoins logistiques et commerciaux.
-              </p>
-            </div>
-            <a href="tel:+243824322239" title="Demander un devis pour un entrepot" class="hidden md:inline-flex px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-600 hover:border-yellow-400 hover:text-yellow-400 transition" data-i18n="warehouses_cta">
-              Demander un devis
-            </a>
-          </div>
-
-      <!-- Grille entrepôts -->
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Entrepôt 1 -->
-        <article class="group relative overflow-hidden rounded-2xl shadow-soft border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 card-hover fade-up transition transform hover:-translate-y-1 hover:shadow-lg">
-          <img src="images/entrepot (1).jpg" alt="Entrepôt standard" class="h-56 w-full object-cover group-hover:scale-105 transition" />
-          <div class="p-6">
-            <h3 class="text-xl font-bold font-display">Entrepôt Standard</h3>
-            <p class="text-slate-600 dark:text-slate-400 mt-2" alt="Avanatges des entrepots Standard">
-              500 m², ventilation naturelle, accès poids lourds, sécurité 24/7 et parking privatif.
-            </p>
-            <div class="mt-4 flex items-center justify-between">
-              <span class="font-semibold text-yellow-500">À partir de 500 $ / mois</span>
-              <div class="flex items-center gap-2">
-                <a href="#contact" class="px-3 py-1.5 rounded-lg bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition">Réserver</a>
-                <a href="https://wa.me/243824322239" alt="réserver un entrepot Standard" class="whatsapp-btn inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-green-500 text-white hover:bg-green-600 transition" data-offer="warehouses_standard" aria-label="WhatsApp">
-                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.52 3.48A11.91 11.91 0 0012 0C5.373 0 0 5.373 0 12c0 2.115.553 4.084 1.6 5.84L0 24l6.36-1.66A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.2-1.248-6.197-3.48-8.52zM12 21.6c-1.58 0-3.12-.4-4.48-1.16l-.32-.18-3.78.99.99-3.7-.2-.32A8.4 8.4 0 013.6 12 8.4 8.4 0 0112 3.6 8.4 8.4 0 0120.4 12 8.4 8.4 0 0112 21.6zM17.1 14.5c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15s-.78.98-.96 1.18-.35.22-.65.07a7.33 7.33 0 01-2.17-1.33c-.48-.48-.4-.8.16-1.05.44-.2.98-.65 1.14-.88.15-.22.02-.42-.12-.57-.13-.13-.3-.35-.45-.52-.15-.18-.2-.3-.3-.5-.1-.2-.01-.38.07-.52.08-.14.68-1.64.94-2.23.25-.59.5-.51.68-.51.18 0 .39.01.6.01.2 0 .52-.07.8.6.27.67.9 2.33.98 2.5.08.17.13.36.01.56-.12.2-.18.3-.35.47-.17.18-.36.4-.51.61-.15.2-.3.39-.15.64.15.25.65 1.06 1.4 1.72.97.86 1.78 1.14 2.05 1.26.27.12.52.1.71.06.2-.04 1.78-.72 2.03-.9.25-.18.42-.38.48-.59.06-.21.06-.4-.12-.55-.18-.15-1.02-.6-1.32-.75z"/></svg>
-                  <span class="sr-only" data-i18n="whatsapp_cta">WhatsApp</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Entrepôt 2 -->
-        <article class="group relative overflow-hidden rounded-2xl shadow-soft border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 card-hover fade-up transition transform hover:-translate-y-1 hover:shadow-lg" style="--delay: 0.1s;">
-          <img src="images/entre.jpg" alt="Grand entrepôt industriel" class="h-56 w-full object-cover group-hover:scale-105 transition" />
-          <div class="p-6">
-            <h3 class="text-xl font-bold font-display">Entrepôt Industriel</h3>
-            <p class="text-slate-600 dark:text-slate-400 mt-2" alt="Avanatges des entrepots Industriel">
-              1200 m², grande hauteur sous plafond, isolation thermique, surveillance caméra HD.
-            </p>
-            <div class="mt-4 flex items-center justify-between">
-              <span class="font-semibold text-yellow-500">À partir de 500 $ / mois</span>
-              <div class="flex items-center gap-2">
-                <a href="#contact" class="px-3 py-1.5 rounded-lg bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition">Réserver</a>
-                <a href="https://wa.me/243824322239" class="whatsapp-btn inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-green-500 text-white hover:bg-green-600 transition" data-offer="warehouses_industrial" aria-label="WhatsApp">
-                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.52 3.48A11.91 11.91 0 0012 0C5.373 0 0 5.373 0 12c0 2.115.553 4.084 1.6 5.84L0 24l6.36-1.66A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.2-1.248-6.197-3.48-8.52zM12 21.6c-1.58 0-3.12-.4-4.48-1.16l-.32-.18-3.78.99.99-3.7-.2-.32A8.4 8.4 0 013.6 12 8.4 8.4 0 0112 3.6 8.4 8.4 0 0120.4 12 8.4 8.4 0 0112 21.6zM17.1 14.5c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15s-.78.98-.96 1.18-.35.22-.65.07a7.33 7.33 0 01-2.17-1.33c-.48-.48-.4-.8.16-1.05.44-.2.98-.65 1.14-.88.15-.22.02-.42-.12-.57-.13-.13-.3-.35-.45-.52-.15-.18-.2-.3-.3-.5-.1-.2-.01-.38.07-.52.08-.14.68-1.64.94-2.23.25-.59.5-.51.68-.51.18 0 .39.01.6.01.2 0 .52-.07.8.6.27.67.9 2.33.98 2.5.08.17.13.36.01.56-.12.2-.18.3-.35.47-.17.18-.36.4-.51.61-.15.2-.3.39-.15.64.15.25.65 1.06 1.4 1.72.97.86 1.78 1.14 2.05 1.26.27.12.52.1.71.06.2-.04 1.78-.72 2.03-.9.25-.18.42-.38.48-.59.06-.21.06-.4-.12-.55-.18-.15-1.02-.6-1.32-.75z"/></svg>
-                  <span class="sr-only" data-i18n="whatsapp_cta">WhatsApp</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Entrepôt 3 -->
-        <article class="group relative overflow-hidden rounded-2xl shadow-soft border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 card-hover fade-up transition transform hover:-translate-y-1 hover:shadow-lg" style="--delay: 0.2s;">
-          <img src="images/entrepot1.jpg" alt="Espace modulable" class="h-56 w-full object-cover group-hover:scale-105 transition" />
-          <div class="p-6">
-            <h3 class="text-xl font-bold font-display">Espace Modulable</h3>
-            <p class="text-slate-600 dark:text-slate-400 mt-2">
-              Surface flexible de 200 à 800 m², bureaux intégrés, service de maintenance inclus.
-            </p>
-            <div class="mt-4 flex items-center justify-between">
-              <span class="font-semibold text-yellow-500">À partir de 500 $ / mois</span>
-              <div class="flex items-center gap-2">
-                <a href="#contact" class="px-3 py-1.5 rounded-lg bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition">Réserver</a>
-                <a href="https://wa.me/243824322239" class="whatsapp-btn inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-green-500 text-white hover:bg-green-600 transition" data-offer="warehouses_modulable" aria-label="WhatsApp">
-                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.52 3.48A11.91 11.91 0 0012 0C5.373 0 0 5.373 0 12c0 2.115.553 4.084 1.6 5.84L0 24l6.36-1.66A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.2-1.248-6.197-3.48-8.52zM12 21.6c-1.58 0-3.12-.4-4.48-1.16l-.32-.18-3.78.99.99-3.7-.2-.32A8.4 8.4 0 013.6 12 8.4 8.4 0 0112 3.6 8.4 8.4 0 0120.4 12 8.4 8.4 0 0112 21.6zM17.1 14.5c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15s-.78.98-.96 1.18-.35.22-.65.07a7.33 7.33 0 01-2.17-1.33c-.48-.48-.4-.8.16-1.05.44-.2.98-.65 1.14-.88.15-.22.02-.42-.12-.57-.13-.13-.3-.35-.45-.52-.15-.18-.2-.3-.3-.5-.1-.2-.01-.38.07-.52.08-.14.68-1.64.94-2.23.25-.59.5-.51.68-.51.18 0 .39.01.6.01.2 0 .52-.07.8.6.27.67.9 2.33.98 2.5.08.17.13.36.01.56-.12.2-.18.3-.35.47-.17.18-.36.4-.51.61-.15.2-.3.39-.15.64.15.25.65 1.06 1.4 1.72.97.86 1.78 1.14 2.05 1.26.27.12.52.1.71.06.2-.04 1.78-.72 2.03-.9.25-.18.42-.38.48-.59.06-.21.06-.4-.12-.55-.18-.15-1.02-.6-1.32-.75z"/></svg>
-                  <span class="sr-only" data-i18n="whatsapp_cta">WhatsApp</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-      </section>
-
-  <!-- === TESTIMONIALES SECTION === -->
-  <section class="bg-primary-50 dark:bg-gray-800 py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-16 fade-up">
-        <h2 class="text-5xl md:text-5xl font-black font-display mb-4">
-          Ce que disent nos <span class="gold-title">Clients</span>
-        </h2>
-        <p class="text-xl text-slate-600 dark:text-slate-400">Découvrez les avis des voyageurs satisfaits</p>
-      </div>
-
-      <div class="testimonial-carousel">
-        <div class="testimonial-slider">
-          <div class="testimonial-card fade-up">
-            <div class="flex items-center gap-1 mb-3">
-              <span class="text-accent text-lg">★★★★★</span>
-            </div>
-            <p class="text-slate-700 dark:text-slate-300 mb-4">
-              "Un service impeccable, des chambres magnifiques et une ambiance chaleureuse. C'est vraiment digne d'un établissement 5 étoiles!"
-            </p>
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-gradient-to-r from-accent to-primary-600"></div>
-              <div>
-                <p class="font-bold text-slate-900 dark:text-white">Marie Dupont</p>
-                <p class="text-sm text-slate-600 dark:text-slate-400">Paris, France</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card fade-up" style="--delay: 0.1s;">
-            <div class="flex items-center gap-1 mb-3">
-              <span class="text-accent text-lg">★★★★★</span>
-            </div>
-            <p class="text-slate-700 dark:text-slate-300 mb-4">
-              "L'hospitalité exceptionnelle, la gastronomie raffinée et le confort. Un séjour inoubliable dans le cœur de Kisangani!"
-            </p>
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary-600 to-accent"></div>
-              <div>
-                <p class="font-bold text-slate-900 dark:text-white">Ahmed Sall</p>
-                <p class="text-sm text-slate-600 dark:text-slate-400">Kinshasa, RDC</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card fade-up" style="--delay: 0.2s;">
-            <div class="flex items-center gap-1 mb-3">
-              <span class="text-accent text-lg">★★★★★</span>
-            </div>
-            <p class="text-slate-700 dark:text-slate-300 mb-4">
-              "Les meilleures installations que j'ai jamais vues à Kisangani. Le personnel est attentionné et professionnel. Je reviendrai!"
-            </p>
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-gradient-to-r from-accent to-primary-500"></div>
-              <div>
-                <p class="font-bold text-slate-900 dark:text-white">Lisa Chen</p>
-                <p class="text-sm text-slate-600 dark:text-slate-400">Singapour</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card fade-up" aria-hidden="true">
-            <div class="flex items-center gap-1 mb-3">
-              <span class="text-accent text-lg">★★★★★</span>
-            </div>
-            <p class="text-slate-700 dark:text-slate-300 mb-4">
-              "Un service impeccable, des chambres magnifiques et une ambiance chaleureuse. C'est vraiment digne d'un établissement 5 étoiles!"
-            </p>
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-gradient-to-r from-accent to-primary-600"></div>
-              <div>
-                <p class="font-bold text-slate-900 dark:text-white">Marie Dupont</p>
-                <p class="text-sm text-slate-600 dark:text-slate-400">Paris, France</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card fade-up" style="--delay: 0.1s;" aria-hidden="true">
-            <div class="flex items-center gap-1 mb-3">
-              <span class="text-accent text-lg">★★★★★</span>
-            </div>
-            <p class="text-slate-700 dark:text-slate-300 mb-4">
-              "L'hospitalité exceptionnelle, la gastronomie raffinée et le confort. Un séjour inoubliable dans le cœur de Kisangani!"
-            </p>
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary-600 to-accent"></div>
-              <div>
-                <p class="font-bold text-slate-900 dark:text-white">Ahmed Sall</p>
-                <p class="text-sm text-slate-600 dark:text-slate-400">Kinshasa, RDC</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card fade-up" style="--delay: 0.2s;" aria-hidden="true">
-            <div class="flex items-center gap-1 mb-3">
-              <span class="text-accent text-lg">★★★★★</span>
-            </div>
-            <p class="text-slate-700 dark:text-slate-300 mb-4">
-              "Les meilleures installations que j'ai jamais vues à Kisangani. Le personnel est attentionné et professionnel. Je reviendrai!"
-            </p>
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-gradient-to-r from-accent to-primary-500"></div>
-              <div>
-                <p class="font-bold text-slate-900 dark:text-white">Lisa Chen</p>
-                <p class="text-sm text-slate-600 dark:text-slate-400">Singapour</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- === RESTAURANT SECTION === -->
-  <section id="restaurant" class="bg-white dark:bg-gray-900 py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6 fade-up">
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 w-fit">
-            <span class="w-2 h-2 rounded-full bg-accent"></span>
-            <span class="text-sm font-bold text-accent">GASTRONOMIE PRESTIGE</span>
-          </div>
-
-          <h2 class="text-5xl md:text-5xl font-black font-display">
-            Restaurant <span class="gold-title">Gourmet</span>
-          </h2>
-
-          <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-            Une cuisine d'exception qui marie les saveurs congolaises aux inspirations gastronomiques internationales. Notre chef étoilé crée des expériences culinaires mémorables avec des produits frais et un savoir-faire exceptionnel.
+      <div class="container-site relative z-10 w-full pt-40 pb-10 md:pb-14">
+        <div class="max-w-3xl">
+          <p class="eyebrow on-dark reveal">Kisangani · République Démocratique du Congo</p>
+          <h1 class="display-title on-dark mt-6 text-white reveal" style="--d:.1s">L'art de recevoir,<br><em>au cœur de Kisangani</em></h1>
+          <p class="mt-6 text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed reveal" style="--d:.2s">
+            Chambres et suites raffinées, appartements haut de gamme, table gastronomique et service attentionné 24h/24 : bienvenue à l'Hôtel Glodi VIP.
           </p>
+          <div class="mt-9 flex flex-col sm:flex-row gap-3 reveal" style="--d:.3s">
+            <a href="#contact" class="btn btn-gold">Réserver votre séjour</a>
+            <a href="#chambres" class="btn btn-light">Découvrir les chambres</a>
+          </div>
+          <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-white/80 reveal" style="--d:.4s">
+            <span class="flex items-center gap-2"><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>Service 5 étoiles</span>
+            <span class="flex items-center gap-2"><svg class="w-4 h-4 text-[#E3C894]" aria-hidden="true"><use href="#i-clock"/></svg>Réception &amp; conciergerie 24h/24</span>
+            <span class="flex items-center gap-2"><svg class="w-4 h-4 text-[#E3C894]" aria-hidden="true"><use href="#i-pin"/></svg>Quartier Plateau Boyoma</span>
+          </div>
+        </div>
 
-          <ul class="space-y-3 text-slate-700 dark:text-slate-300">
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">✓</span>
-              Carte combiné congolaise & internationale
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">✓</span>
-              Menus dégustation personnalisés
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">✓</span>
-              Cave à vins d'exception
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">✓</span>
-              Bar à cocktails signature
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">✓</span>
-              Service en salle exemplaire
-            </li>
+        <!-- Barre de réservation -->
+        <form class="booking-bar mt-12 md:mt-16 grid grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_.8fr_auto] divide-y lg:divide-y-0 lg:divide-x divide-line reveal" style="--d:.5s" data-booking aria-label="Vérifier la disponibilité">
+          <div class="booking-field col-span-2 lg:col-span-1">
+            <label for="bk-stay">Hébergement</label>
+            <select id="bk-stay" name="stay">
+              <optgroup label="Chambres &amp; suites">
+                <option value="Chambre Classique" data-line="hotel">Chambre Classique — dès 30 $</option>
+                <option value="Suite Exécutive" data-line="hotel" selected>Suite Exécutive — dès 50 $</option>
+                <option value="Chambre Familiale" data-line="hotel">Chambre Familiale — dès 70 $</option>
+              </optgroup>
+              <optgroup label="Appartements">
+                <option value="Appartement VIP" data-line="residences">Appartement VIP — dès 150 $</option>
+                <option value="Appartement Deluxe" data-line="residences">Appartement Deluxe — dès 170 $</option>
+                <option value="Studio Urbain" data-line="residences">Studio Urbain — dès 100 $</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="booking-field">
+            <label for="bk-in">Arrivée</label>
+            <input id="bk-in" type="date" name="checkin" data-checkin="bk-out" required>
+          </div>
+          <div class="booking-field">
+            <label for="bk-out">Départ</label>
+            <input id="bk-out" type="date" name="checkout" required>
+          </div>
+          <div class="booking-field col-span-2 lg:col-span-1">
+            <label for="bk-guests">Personnes</label>
+            <select id="bk-guests" name="guests">
+              <option>1 adulte</option>
+              <option selected>2 adultes</option>
+              <option>3 personnes</option>
+              <option>4 personnes</option>
+              <option>5 personnes ou plus</option>
+            </select>
+          </div>
+          <div class="col-span-2 lg:col-span-1 p-3 flex">
+            <button type="submit" class="btn btn-dark w-full lg:w-auto lg:h-full">Vérifier la disponibilité</button>
+          </div>
+        </form>
+        <p class="mt-3 text-xs text-white/60 reveal" style="--d:.55s">Réponse rapide de notre réception par WhatsApp · Meilleur tarif garanti en réservation directe</p>
+      </div>
+    </section>
+
+    <!-- ===== L'HÔTEL ===== -->
+    <section id="hotel" class="section">
+      <div class="container-site grid lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+        <div class="lg:col-span-6 reveal">
+          <div class="img-frame">
+            <div class="grid grid-cols-5 gap-4">
+              <img src="images/facade.jpg" alt="Façade de l'Hôtel Glodi VIP en journée" width="2048" height="1364" loading="lazy" decoding="async" class="col-span-5 sm:col-span-3 w-full h-80 sm:h-[460px] object-cover">
+              <div class="hidden sm:flex col-span-2 flex-col gap-4">
+                <img src="images/ext.jpg" alt="Jardin tropical de l'hôtel" width="2048" height="1364" loading="lazy" decoding="async" class="w-full h-[222px] object-cover">
+                <img src="images/ajout%20(2).jpg" alt="Cour intérieure et galeries de l'hôtel" width="2048" height="1364" loading="lazy" decoding="async" class="w-full h-[222px] object-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-6 reveal" style="--d:.1s">
+          <p class="eyebrow">Bienvenue</p>
+          <h2 class="section-title mt-5">Une maison d'exception, <em>pensée pour vous</em></h2>
+          <p class="lead mt-6">
+            Au cœur du quartier Plateau Boyoma, l'Hôtel Glodi VIP accueille voyageurs d'affaires, familles et visiteurs de passage dans un cadre élégant et serein. Chaque détail — de la literie à l'accueil — est pensé pour que vous vous sentiez attendu.
+          </p>
+          <p class="mt-4 text-muted leading-relaxed">
+            Chambres et suites, appartements meublés pour les séjours longue durée, restaurant, salles de réception et espaces professionnels : tout ce dont vous avez besoin à Kisangani, réuni à une seule adresse.
+          </p>
+          <div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 border-t border-line pt-8">
+            <div><p class="stat-num">45+</p><p class="mt-2 text-xs tracking-[0.14em] uppercase text-muted">Chambres &amp; suites</p></div>
+            <div><p class="stat-num">24/7</p><p class="mt-2 text-xs tracking-[0.14em] uppercase text-muted">Conciergerie</p></div>
+            <div><p class="stat-num">8</p><p class="mt-2 text-xs tracking-[0.14em] uppercase text-muted">Salles de réception</p></div>
+            <div><p class="stat-num">3</p><p class="mt-2 text-xs tracking-[0.14em] uppercase text-muted">Types d'appartements</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CHAMBRES ===== -->
+    <section id="chambres" class="section bg-subtle">
+      <div class="container-site">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <p class="eyebrow center">Chambres &amp; suites</p>
+          <h2 class="section-title mt-5">Le confort, <em>dans ses moindres détails</em></h2>
+          <p class="lead mt-6">Trois catégories d'hébergement climatisées, avec Wi-Fi haut débit et service de chambre attentionné — pour un séjour d'affaires comme pour des vacances en famille.</p>
+          <div class="ornament mt-8" aria-hidden="true"><span></span></div>
+        </div>
+
+        <div class="mt-16 md:mt-20 space-y-16 md:space-y-24">
+          <article id="room-classique" class="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            <div class="lg:col-span-7 reveal">
+            <div class="carousel aspect-[4/3] lg:aspect-[16/11]" data-carousel aria-label="Photos — Chambre Classique">
+              <div class="carousel-slide is-active" data-lightbox="room-classique" data-src="apparts/litcanon.jpg" data-caption="Lit queen de la Chambre Classique" style="cursor:zoom-in"><img src="apparts/litcanon.jpg" alt="Lit queen de la Chambre Classique" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="room-classique" data-src="images/classique.jpg" data-caption="Chambre Classique avec moustiquaire" style="cursor:zoom-in"><img src="images/classique.jpg" alt="Chambre Classique avec moustiquaire" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="room-classique" data-src="images/classique3.jpg" data-caption="Galerie extérieure des chambres" style="cursor:zoom-in"><img src="images/classique3.jpg" alt="Galerie extérieure des chambres" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="room-classique" data-src="images/classique2.jpg" data-caption="Coursive donnant sur la ville" style="cursor:zoom-in"><img src="images/classique2.jpg" alt="Coursive donnant sur la ville" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <button type="button" class="carousel-expand" data-expand aria-label="Photos — Chambre Classique : agrandir les photos"><svg aria-hidden="true"><use href="#i-expand"/></svg></button>
+            </div>
+            </div>
+            <div class="lg:col-span-5 reveal" style="--d:.1s">
+              <div class="flex items-center gap-3"><p class="price-label">Chambre · 01</p></div>
+              <h3 class="font-serif text-4xl md:text-5xl font-medium mt-4">Chambre Classique</h3>
+              <p class="mt-5 text-muted leading-relaxed">Un refuge élégant et apaisant pour vos séjours d'affaires ou de loisirs : lit queen, douche moderne, bureau, climatisation et Wi-Fi, avec une vue dégagée sur la ville.</p>
+              <div class="mt-6 flex flex-wrap gap-2"><span class="chip"><svg aria-hidden="true"><use href="#i-users"/></svg>2 personnes</span><span class="chip"><svg aria-hidden="true"><use href="#i-bed"/></svg>Lit queen</span><span class="chip"><svg aria-hidden="true"><use href="#i-droplet"/></svg>Douche moderne</span><span class="chip"><svg aria-hidden="true"><use href="#i-wifi"/></svg>Wi-Fi</span></div>
+              <ul class="check-list mt-6 grid sm:grid-cols-2 gap-x-6 text-[0.95rem]"><li><svg aria-hidden="true"><use href="#i-check"/></svg>Climatisation individuelle</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Coffre-fort &amp; minibar</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Bureau ergonomique</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Service limousine sur demande</li></ul>
+              <div class="mt-8 pt-8 border-t border-line flex flex-wrap items-end justify-between gap-6">
+                <div><p class="price-label">À partir de</p><p class="price-tag mt-2">30 $<small>/ nuit</small></p></div>
+                <div class="flex gap-3">
+                  <a href="#contact" class="btn btn-dark" data-book="Chambre Classique">Réserver</a>
+                  <a href="https://wa.me/243820600712?text=Bonjour%20H%C3%B4tel%20Glodi%20VIP%2C%20je%20souhaite%20r%C3%A9server%20la%20Chambre%20Classique.%20Mes%20dates%20%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp !px-4" aria-label="Réserver la Chambre Classique sur WhatsApp"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="room-executive" class="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            <div class="lg:col-span-7 reveal lg:order-2">
+            <div class="carousel aspect-[4/3] lg:aspect-[16/11]" data-carousel aria-label="Photos — Suite Exécutive">
+              <div class="carousel-slide is-active" data-lightbox="room-executive" data-src="images/executive.jpg" data-caption="Lit de la Suite Exécutive" style="cursor:zoom-in"><img src="images/executive.jpg" alt="Lit de la Suite Exécutive" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="room-executive" data-src="images/executive2.jpg" data-caption="Suite Exécutive avec fauteuil et bureau" style="cursor:zoom-in"><img src="images/executive2.jpg" alt="Suite Exécutive avec fauteuil et bureau" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="room-executive" data-src="images/executive3.jpg" data-caption="Coin bureau et salon de la Suite Exécutive" style="cursor:zoom-in"><img src="images/executive3.jpg" alt="Coin bureau et salon de la Suite Exécutive" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="room-executive" data-src="images/executive1.jpg" data-caption="Literie de la Suite Exécutive" style="cursor:zoom-in"><img src="images/executive1.jpg" alt="Literie de la Suite Exécutive" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <button type="button" class="carousel-expand" data-expand aria-label="Photos — Suite Exécutive : agrandir les photos"><svg aria-hidden="true"><use href="#i-expand"/></svg></button>
+            </div>
+            </div>
+            <div class="lg:col-span-5 reveal lg:order-1" style="--d:.1s">
+              <div class="flex items-center gap-3"><p class="price-label">Suite · 02</p><span class="badge">Signature</span></div>
+              <h3 class="font-serif text-4xl md:text-5xl font-medium mt-4">Suite Exécutive</h3>
+              <p class="mt-5 text-muted leading-relaxed">Notre suite la plus prisée : espace salon séparé, baignoire avec jets, balcon privé, accès lounge et télévision 4K. L'adresse idéale pour travailler et se ressourcer.</p>
+              <div class="mt-6 flex flex-wrap gap-2"><span class="chip"><svg aria-hidden="true"><use href="#i-users"/></svg>2 personnes</span><span class="chip"><svg aria-hidden="true"><use href="#i-sofa"/></svg>Salon séparé</span><span class="chip"><svg aria-hidden="true"><use href="#i-bath"/></svg>Baignoire à jets</span><span class="chip"><svg aria-hidden="true"><use href="#i-tv"/></svg>TV 4K</span></div>
+              <ul class="check-list mt-6 grid sm:grid-cols-2 gap-x-6 text-[0.95rem]"><li><svg aria-hidden="true"><use href="#i-check"/></svg>Espace salon exclusif</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Eaux minérales &amp; produits d'accueil de luxe</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Balcon privé</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Service de majordome sur demande</li></ul>
+              <div class="mt-8 pt-8 border-t border-line flex flex-wrap items-end justify-between gap-6">
+                <div><p class="price-label">À partir de</p><p class="price-tag mt-2">50 $<small>/ nuit</small></p></div>
+                <div class="flex gap-3">
+                  <a href="#contact" class="btn btn-dark" data-book="Suite Exécutive">Réserver</a>
+                  <a href="https://wa.me/243820600712?text=Bonjour%20H%C3%B4tel%20Glodi%20VIP%2C%20je%20souhaite%20r%C3%A9server%20la%20Suite%20Ex%C3%A9cutive.%20Mes%20dates%20%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp !px-4" aria-label="Réserver la Suite Exécutive sur WhatsApp"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article id="room-familiale" class="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            <div class="lg:col-span-7 reveal">
+            <div class="carousel aspect-[4/3] lg:aspect-[16/11]" data-carousel aria-label="Photos — Chambre Familiale">
+              <div class="carousel-slide is-active" data-lightbox="room-familiale" data-src="apparts/lithote.jpg" data-caption="Grand lit de la Chambre Familiale" style="cursor:zoom-in"><img src="apparts/lithote.jpg" alt="Grand lit de la Chambre Familiale" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="room-familiale" data-src="images/enfant.jpg" data-caption="Chambre Familiale colorée" style="cursor:zoom-in"><img src="images/enfant.jpg" alt="Chambre Familiale colorée" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="room-familiale" data-src="images/enfant2.jpg" data-caption="Coin télévision de la Chambre Familiale" style="cursor:zoom-in"><img src="images/enfant2.jpg" alt="Coin télévision de la Chambre Familiale" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <button type="button" class="carousel-expand" data-expand aria-label="Photos — Chambre Familiale : agrandir les photos"><svg aria-hidden="true"><use href="#i-expand"/></svg></button>
+            </div>
+            </div>
+            <div class="lg:col-span-5 reveal" style="--d:.1s">
+              <div class="flex items-center gap-3"><p class="price-label">Chambre · 03</p></div>
+              <h3 class="font-serif text-4xl md:text-5xl font-medium mt-4">Chambre Familiale</h3>
+              <p class="mt-5 text-muted leading-relaxed">Pensée pour les familles : deux lits doubles, canapé-lit, espace jeux, kitchenette et terrasse avec vue panoramique. De la place pour chacun, et des souvenirs pour tous.</p>
+              <div class="mt-6 flex flex-wrap gap-2"><span class="chip"><svg aria-hidden="true"><use href="#i-users"/></svg>Familles</span><span class="chip"><svg aria-hidden="true"><use href="#i-bed"/></svg>2 lits doubles</span><span class="chip"><svg aria-hidden="true"><use href="#i-chef"/></svg>Kitchenette</span><span class="chip"><svg aria-hidden="true"><use href="#i-mountain"/></svg>Terrasse panoramique</span></div>
+              <ul class="check-list mt-6 grid sm:grid-cols-2 gap-x-6 text-[0.95rem]"><li><svg aria-hidden="true"><use href="#i-check"/></svg>Lit bébé sur demande</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Kitchenette équipée</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Salon d'accueil</li><li><svg aria-hidden="true"><use href="#i-check"/></svg>Espace jeux pour enfants</li></ul>
+              <div class="mt-8 pt-8 border-t border-line flex flex-wrap items-end justify-between gap-6">
+                <div><p class="price-label">À partir de</p><p class="price-tag mt-2">70 $<small>/ nuit</small></p></div>
+                <div class="flex gap-3">
+                  <a href="#contact" class="btn btn-dark" data-book="Chambre Familiale">Réserver</a>
+                  <a href="https://wa.me/243820600712?text=Bonjour%20H%C3%B4tel%20Glodi%20VIP%2C%20je%20souhaite%20r%C3%A9server%20la%20Chambre%20Familiale.%20Mes%20dates%20%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp !px-4" aria-label="Réserver la Chambre Familiale sur WhatsApp"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== APPARTEMENTS ===== -->
+    <section id="appartements" class="section">
+      <div class="container-site">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 reveal">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Résidences Glodi</p>
+            <h2 class="section-title mt-5">Appartements <em>haut de gamme</em></h2>
+            <p class="lead mt-6">Vivre Kisangani comme chez soi : appartements meublés et sécurisés, à la nuit ou au mois, avec les services de l'hôtel à portée de main.</p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="tel:+243824322239" class="btn btn-outline"><svg aria-hidden="true"><use href="#i-phone"/></svg>Demander une visite</a>
+          </div>
+        </div>
+
+        <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article class="card flex flex-col reveal" style="--d:0.0s">
+            <div class="carousel aspect-[4/3]" data-carousel aria-label="Photos — Appartement VIP">
+              <div class="carousel-slide is-active" data-lightbox="apt-card-1" data-src="apparts/appartvip.jpg" data-caption="Appartement VIP — Salon moderne" style="cursor:zoom-in"><img src="apparts/appartvip.jpg" alt="Appartement VIP — Salon moderne" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="apt-card-1" data-src="apparts/chambre1vip.jpg" data-caption="Appartement VIP — Chambre principale" style="cursor:zoom-in"><img src="apparts/chambre1vip.jpg" alt="Appartement VIP — Chambre principale" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="apt-card-1" data-src="apparts/appartsvip3.jpg" data-caption="Appartement VIP — Cuisine équipée" style="cursor:zoom-in"><img src="apparts/appartsvip3.jpg" alt="Appartement VIP — Cuisine équipée" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="apt-card-1" data-src="apparts/douchevip.jpg" data-caption="Appartement VIP — Salle d'eau avec douche pluie" style="cursor:zoom-in"><img src="apparts/douchevip.jpg" alt="Appartement VIP — Salle d'eau avec douche pluie" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <button type="button" class="carousel-expand" data-expand aria-label="Photos — Appartement VIP : agrandir les photos"><svg aria-hidden="true"><use href="#i-expand"/></svg></button>
+            </div>
+            <div class="p-7 flex flex-col flex-1">
+              <div class="flex items-center justify-between gap-3 min-h-[28px]"><p class="price-label">2 chambres + salon</p><span class="badge">Le plus demandé</span></div>
+              <h3 class="font-serif text-3xl font-medium mt-3"><a href="pages/appartements1.html" class="hover:text-gold-ink transition-colors">Appartement VIP</a></h3>
+              <p class="mt-3 text-muted text-[0.95rem] leading-relaxed">2 chambres, salon moderne, cuisine équipée, balcon, Wi-Fi et sécurité 24h/24.</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="chip"><svg aria-hidden="true"><use href="#i-bed"/></svg>2 chambres</span><span class="chip"><svg aria-hidden="true"><use href="#i-sofa"/></svg>Salon</span><span class="chip"><svg aria-hidden="true"><use href="#i-chef"/></svg>Cuisine</span><span class="chip"><svg aria-hidden="true"><use href="#i-users"/></svg>4 pers.</span></div>
+              <div class="mt-auto">
+                <div class="mt-7 pt-6 border-t border-line flex items-end justify-between gap-4">
+                  <div><p class="price-label">À partir de</p><p class="price-tag mt-2">150 $<small>/ nuit</small></p></div>
+                  <p class="text-sm text-muted text-right">ou <span class="font-semibold text-ink">1 500 $</span><br>par mois</p>
+                </div>
+                <div class="mt-6 grid grid-cols-2 gap-3">
+                  <a href="pages/appartements1.html" class="btn btn-outline btn-sm">Découvrir</a>
+                  <a href="#contact" class="btn btn-dark btn-sm" data-book="Appartement VIP">Réserver</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card flex flex-col reveal" style="--d:0.1s">
+            <div class="carousel aspect-[4/3]" data-carousel aria-label="Photos — Appartement Deluxe">
+              <div class="carousel-slide is-active" data-lightbox="apt-card-2" data-src="apparts/deluxe2.jpg" data-caption="Appartement Deluxe — Salon lumineux" style="cursor:zoom-in"><img src="apparts/deluxe2.jpg" alt="Appartement Deluxe — Salon lumineux" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="apt-card-2" data-src="apparts/chambredeluxe.jpg" data-caption="Appartement Deluxe — Chambre Deluxe" style="cursor:zoom-in"><img src="apparts/chambredeluxe.jpg" alt="Appartement Deluxe — Chambre Deluxe" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="apt-card-2" data-src="apparts/deluxe.jpg" data-caption="Appartement Deluxe — Lustre en cristal" style="cursor:zoom-in"><img src="apparts/deluxe.jpg" alt="Appartement Deluxe — Lustre en cristal" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="apt-card-2" data-src="apparts/cuisin3.jpg" data-caption="Appartement Deluxe — Cuisine" style="cursor:zoom-in"><img src="apparts/cuisin3.jpg" alt="Appartement Deluxe — Cuisine" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <button type="button" class="carousel-expand" data-expand aria-label="Photos — Appartement Deluxe : agrandir les photos"><svg aria-hidden="true"><use href="#i-expand"/></svg></button>
+            </div>
+            <div class="p-7 flex flex-col flex-1">
+              <div class="flex items-center justify-between gap-3 min-h-[28px]"><p class="price-label">3 chambres + salon</p><span class="badge">Grand espace</span></div>
+              <h3 class="font-serif text-3xl font-medium mt-3"><a href="pages/appartements2.html" class="hover:text-gold-ink transition-colors">Appartement Deluxe</a></h3>
+              <p class="mt-3 text-muted text-[0.95rem] leading-relaxed">3 chambres spacieuses, cuisine ouverte, climatisation, Smart TV et espace bureau.</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="chip"><svg aria-hidden="true"><use href="#i-bed"/></svg>3 chambres</span><span class="chip"><svg aria-hidden="true"><use href="#i-sofa"/></svg>Grand salon</span><span class="chip"><svg aria-hidden="true"><use href="#i-chef"/></svg>Cuisine ouverte</span><span class="chip"><svg aria-hidden="true"><use href="#i-users"/></svg>6 pers.</span></div>
+              <div class="mt-auto">
+                <div class="mt-7 pt-6 border-t border-line flex items-end justify-between gap-4">
+                  <div><p class="price-label">À partir de</p><p class="price-tag mt-2">170 $<small>/ nuit</small></p></div>
+                  <p class="text-sm text-muted text-right">ou <span class="font-semibold text-ink">1 700 $</span><br>par mois</p>
+                </div>
+                <div class="mt-6 grid grid-cols-2 gap-3">
+                  <a href="pages/appartements2.html" class="btn btn-outline btn-sm">Découvrir</a>
+                  <a href="#contact" class="btn btn-dark btn-sm" data-book="Appartement Deluxe">Réserver</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card flex flex-col reveal" style="--d:0.2s">
+            <div class="carousel aspect-[4/3]" data-carousel aria-label="Photos — Studio Urbain">
+              <div class="carousel-slide is-active" data-lightbox="apt-card-3" data-src="apparts/lit.jpg" data-caption="Studio Urbain — Lit double" style="cursor:zoom-in"><img src="apparts/lit.jpg" alt="Studio Urbain — Lit double" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="apt-card-3" data-src="apparts/tvmoderne.jpg" data-caption="Studio Urbain — Coin TV" style="cursor:zoom-in"><img src="apparts/tvmoderne.jpg" alt="Studio Urbain — Coin TV" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="apt-card-3" data-src="apparts/studio.jpg" data-caption="Studio Urbain — Kitchenette" style="cursor:zoom-in"><img src="apparts/studio.jpg" alt="Studio Urbain — Kitchenette" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide" data-lightbox="apt-card-3" data-src="apparts/panora.jpg" data-caption="Studio Urbain — Vue panoramique" style="cursor:zoom-in"><img src="apparts/panora.jpg" alt="Studio Urbain — Vue panoramique" width="2048" height="1364" loading="lazy" decoding="async"></div>
+              <button type="button" class="carousel-expand" data-expand aria-label="Photos — Studio Urbain : agrandir les photos"><svg aria-hidden="true"><use href="#i-expand"/></svg></button>
+            </div>
+            <div class="p-7 flex flex-col flex-1">
+              <div class="flex items-center justify-between gap-3 min-h-[28px]"><p class="price-label">Studio + kitchenette</p></div>
+              <h3 class="font-serif text-3xl font-medium mt-3"><a href="pages/appartements3.html" class="hover:text-gold-ink transition-colors">Studio Urbain</a></h3>
+              <p class="mt-3 text-muted text-[0.95rem] leading-relaxed">Idéal pour cadres et étudiants : kitchenette, Wi-Fi et vue panoramique.</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="chip"><svg aria-hidden="true"><use href="#i-bed"/></svg>Lit double</span><span class="chip"><svg aria-hidden="true"><use href="#i-chef"/></svg>Kitchenette</span><span class="chip"><svg aria-hidden="true"><use href="#i-wifi"/></svg>Wi-Fi</span><span class="chip"><svg aria-hidden="true"><use href="#i-users"/></svg>2 pers.</span></div>
+              <div class="mt-auto">
+                <div class="mt-7 pt-6 border-t border-line flex items-end justify-between gap-4">
+                  <div><p class="price-label">À partir de</p><p class="price-tag mt-2">100 $<small>/ nuit</small></p></div>
+                  <p class="text-sm text-muted text-right">ou <span class="font-semibold text-ink">1 000 $</span><br>par mois</p>
+                </div>
+                <div class="mt-6 grid grid-cols-2 gap-3">
+                  <a href="pages/appartements3.html" class="btn btn-outline btn-sm">Découvrir</a>
+                  <a href="#contact" class="btn btn-dark btn-sm" data-book="Studio Urbain">Réserver</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-3 gap-6 border-t border-line pt-10 reveal">
+          <div class="flex gap-4"><svg class="w-6 h-6 text-gold-ink shrink-0" aria-hidden="true"><use href="#i-calendar"/></svg><div><p class="font-semibold text-sm">Nuit, semaine ou mois</p><p class="text-sm text-muted">Tarifs dégressifs pour les longs séjours.</p></div></div>
+          <div class="flex gap-4"><svg class="w-6 h-6 text-gold-ink shrink-0" aria-hidden="true"><use href="#i-shield"/></svg><div><p class="font-semibold text-sm">Sécurité 24h/24</p><p class="text-sm text-muted">Gardiennage et accès contrôlé.</p></div></div>
+          <div class="flex gap-4"><svg class="w-6 h-6 text-gold-ink shrink-0" aria-hidden="true"><use href="#i-key"/></svg><div><p class="font-semibold text-sm">Prêts à vivre</p><p class="text-sm text-muted">Entièrement meublés et équipés.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESTAURANT ===== -->
+    <section id="restaurant" class="section bg-night on-dark relative overflow-hidden">
+      <div class="container-site grid lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+        <div class="lg:col-span-5 lg:order-2 reveal">
+          <p class="eyebrow on-dark">Gastronomie</p>
+          <h2 class="section-title mt-5 text-white">Restaurant <em>&amp; bar</em></h2>
+          <p class="lead mt-6">Une cuisine qui marie les saveurs congolaises aux inspirations internationales. Notre chef sublime des produits frais, du petit-déjeuner au dîner, dans une salle chaleureuse et feutrée.</p>
+          <ul class="check-list mt-8 grid sm:grid-cols-2 gap-x-6">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Carte congolaise &amp; internationale</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Menus dégustation personnalisés</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Cave à vins sélectionnée</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Bar à cocktails signature</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Service en salle attentionné</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Repas d'affaires &amp; banquets</li>
           </ul>
-
-          <a href="https://wa.me/243827299744" class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-gradient-to-r from-accent to-yellow-500 text-black font-bold shadow-lg hover:shadow-xl transition-all btn-prestige w-fit">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.91 11.91 0 0012 0C5.373 0 0 5.373 0 12c0 2.115.553 4.084 1.6 5.84L0 24l6.36-1.66A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-3.2-1.248-6.197-3.48-8.52z"/></svg>
-            Réserver une table
-          </a>
-        </div>
-
-        <div class="fade-up img-zoom rounded-3xl">
-          <img src="images/restaurant.jpg" alt="Restaurant Gourmet - Hôtel Glodi VIP" class="w-full h-96 object-cover rounded-3xl shadow-2xl" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- === EXPERIÉNCES === -->
-  <section id="experiences" class="bg-gradient-to-b from-primary-50 to-white dark:from-gray-800 dark:to-gray-900 py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-16 fade-up">
-        <h2 class="text-5xl md:text-5xl font-black font-display mb-4">
-          Expériences <span class="gold-title">Exclusives</span>
-        </h2>
-        <p class="text-xl text-slate-600 dark:text-slate-400">Créez des souvenirs inoubliables</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-soft border border-slate-200 dark:border-slate-700 fade-up">
-          <img src="images/ext.jpg" alt="Détente & Wellness" class="w-full h-56 object-cover" />
-          <div class="p-7">
-            <h3 class="text-2xl font-bold font-display mb-3">Détente Premium</h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-4">
-              Relaxez-vous dans notre espace bien-être avec massages signature, sauna et piscine chauffée.
-            </p>
-            <a href="#contact" class="inline-flex items-center gap-2 text-accent hover:text-yellow-600 font-semibold transition-colors">
-              En savoir plus → 
-            </a>
+          <div class="mt-10 grid grid-cols-3 border-y border-white/10 py-6 text-center">
+            <div><svg class="w-6 h-6 mx-auto text-[#E3C894]" aria-hidden="true"><use href="#i-sun"/></svg><p class="mt-2 text-xs tracking-[0.16em] uppercase text-white/70">Petit-déjeuner</p></div>
+            <div class="border-x border-white/10"><svg class="w-6 h-6 mx-auto text-[#E3C894]" aria-hidden="true"><use href="#i-utensils"/></svg><p class="mt-2 text-xs tracking-[0.16em] uppercase text-white/70">Déjeuner</p></div>
+            <div><svg class="w-6 h-6 mx-auto text-[#E3C894]" aria-hidden="true"><use href="#i-wine"/></svg><p class="mt-2 text-xs tracking-[0.16em] uppercase text-white/70">Dîner &amp; bar</p></div>
+          </div>
+          <div class="mt-10 flex flex-col sm:flex-row gap-3">
+            <a href="https://wa.me/243827299744?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20au%20restaurant%20Glodi%20VIP." target="_blank" rel="noopener" class="btn btn-gold"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Réserver une table</a>
+            <a href="tel:+243827299744" class="btn btn-light"><svg aria-hidden="true"><use href="#i-phone"/></svg>+243 827 299 744</a>
           </div>
         </div>
-
-        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-soft border border-slate-200 dark:border-slate-700 fade-up" style="--delay: 0.1s;">
-          <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=1470&auto=format&fit=crop" alt="Business & Conférences" class="w-full h-56 object-cover" />
-          <div class="p-7">
-            <h3 class="text-2xl font-bold font-display mb-3">Business & Conférences</h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-4">
-              Salles de réunion équipées haute technologie, service traiteur et WiFi illimité.
-            </p>
-            <a href="#contact" class="inline-flex items-center gap-2 text-accent hover:text-yellow-600 font-semibold transition-colors">
-              En savoir plus → 
-            </a>
-          </div>
-        </div>
-
-        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-soft border border-slate-200 dark:border-slate-700 fade-up" style="--delay: 0.2s;">
-          <img src="images/exc.jpg" alt="Excursions" class="w-full h-56 object-cover" />
-          <div class="p-7">
-            <h3 class="text-2xl font-bold font-display mb-3">Excursions Guidées</h3>
-            <p class="text-slate-600 dark:text-slate-400 mb-4">
-              Découvrez le Congo: fleuve, chutes, marchés authentiques et culture locale.
-            </p>
-            <a href="#contact" class="inline-flex items-center gap-2 text-accent hover:text-yellow-600 font-semibold transition-colors">
-              En savoir plus → 
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- === CONTACT & RÉSERVATION === -->
-  <section id="contact" class="bg-white dark:bg-gray-900 py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-12">
-        <div class="space-y-8 fade-up">
-          <div>
-            <h2 class="text-5xl md:text-5xl font-black font-display mb-4">
-              Entrée en <span class="gold-title">Contact</span>
-            </h2>
-            <p class="text-lg text-slate-700 dark:text-slate-300">
-              Notre équipe de concierge est à votre disposition 24h/24 pour répondre à vos besoins.
-            </p>
-          </div>
-
-          <!-- Formulaire Contact -->
-          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-            <input type="hidden" name="access_key" value="bfa99740-06cb-45d6-8583-201a7b0d8236">
-            <input type="hidden" name="botcheck" value="">
-
-            <input type="text" name="Nom" required placeholder="Votre nom complet" class="w-full px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent dark:focus:ring-accent transition" />
-            
-            <input type="email" name="Email" required placeholder="Votre email" class="w-full px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent dark:focus:ring-accent transition" />
-            
-            <input type="tel" name="Téléphone" placeholder="Votre téléphone" class="w-full px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent dark:focus:ring-accent transition" />
-            
-            <textarea name="Message" rows="4" required placeholder="Votre message" class="w-full px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent dark:focus:ring-accent transition resize-none"></textarea>
-
-            <button type="submit" class="w-full px-6 py-3.5 rounded-xl bg-gradient-to-r from-primary-700 to-primary-800 text-white font-bold hover:shadow-lg dark:from-accent dark:to-yellow-500 transition-all btn-prestige">
-              Envoyer mon message
+        <div class="lg:col-span-7 lg:order-1 reveal" style="--d:.1s">
+          <div class="relative pb-16 sm:pb-24 sm:pr-16">
+            <button type="button" class="block w-full media-zoom" data-lightbox="restaurant" data-src="images/restaurant.jpg" data-caption="Table dressée au restaurant">
+              <img src="images/restaurant.jpg" alt="Table dressée au restaurant de l'Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async" class="w-full h-[340px] sm:h-[480px] object-cover">
             </button>
-          </form>
-        </div>
-
-        <div class="rounded-3xl overflow-hidden shadow-2xl fade-up img-zoom">
-          <iframe 
-            class="w-full h-full min-h-96"
-            style="border: 0"
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d397.472941077995!2d25.2022827!3d0.5156370000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1757a0da420c661f%3A0x72ab9c1e0c9f1f7c!2sHotel%20Glody!5e0!3m2!1sfr!2scd!4v1732420000000">
-          </iframe>
+            <button type="button" class="absolute right-0 bottom-0 w-1/2 sm:w-[55%] border-[6px] border-[#14110F] media-zoom" data-lightbox="restaurant" data-src="images/amb1.jpg" data-caption="Salle d'accueil et de restauration">
+              <img src="images/amb1.jpg" alt="Salle d'accueil et de restauration de l'hôtel" width="2048" height="1364" loading="lazy" decoding="async" class="w-full h-40 sm:h-60 object-cover">
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- === FOOTER PRESTIGE === -->
-  <footer class="relative overflow-hidden bg-gradient-to-b from-primary-900 to-black text-white py-16">
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute inset-0 bg-gradient-to-r from-accent/20 via-transparent to-accent/10"></div>
-    </div>
-
-    <div class="relative max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-4 gap-12 mb-12">
-        <div>
-          <h4 class="text-2xl font-bold font-display gold-title mb-3">Glodi VIP</h4>
-          <p class="text-slate-300">Votre destination privilégiée pour l'excellence et le luxe à Kisangani.</p>
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="section">
+      <div class="container-site">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <p class="eyebrow center">Services &amp; équipements</p>
+          <h2 class="section-title mt-5">Tout est prévu, <em>pour que rien ne vous manque</em></h2>
+          <p class="lead mt-6">Une équipe disponible jour et nuit et des services pensés pour simplifier votre séjour, qu'il dure une nuit ou plusieurs mois.</p>
         </div>
+        <ul class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-line">
+          <li class="border-r border-b border-line p-8 lg:p-10 reveal" style="--d:0.00s">
+            <span class="feature-icon"><svg aria-hidden="true"><use href="#i-bell"/></svg></span>
+            <h3 class="font-serif text-2xl font-semibold mt-6">Conciergerie 24h/24</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Une équipe à votre écoute jour et nuit, de la réservation au départ.</p>
+          </li>
+          <li class="border-r border-b border-line p-8 lg:p-10 reveal" style="--d:0.08s">
+            <span class="feature-icon"><svg aria-hidden="true"><use href="#i-wifi"/></svg></span>
+            <h3 class="font-serif text-2xl font-semibold mt-6">Wi-Fi haut débit</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Connexion illimitée dans les chambres, appartements et espaces communs.</p>
+          </li>
+          <li class="border-r border-b border-line p-8 lg:p-10 reveal" style="--d:0.16s">
+            <span class="feature-icon"><svg aria-hidden="true"><use href="#i-car"/></svg></span>
+            <h3 class="font-serif text-2xl font-semibold mt-6">Parking privé</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Stationnement sécurisé dans l'enceinte de l'hôtel.</p>
+          </li>
+          <li class="border-r border-b border-line p-8 lg:p-10 reveal" style="--d:0.24s">
+            <span class="feature-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3 class="font-serif text-2xl font-semibold mt-6">Sécurité permanente</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Gardiennage et vidéosurveillance pour un séjour serein.</p>
+          </li>
+          <li class="border-r border-b border-line p-8 lg:p-10 reveal" style="--d:0.00s">
+            <span class="feature-icon"><svg aria-hidden="true"><use href="#i-utensils"/></svg></span>
+            <h3 class="font-serif text-2xl font-semibold mt-6">Restaurant &amp; bar</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Cuisine congolaise et internationale, cocktails signature.</p>
+          </li>
+          <li class="border-r border-b border-line p-8 lg:p-10 reveal" style="--d:0.08s">
+            <span class="feature-icon"><svg aria-hidden="true"><use href="#i-briefcase"/></svg></span>
+            <h3 class="font-serif text-2xl font-semibold mt-6">Salles de réception</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">8 salles pour vos réunions, séminaires et célébrations.</p>
+          </li>
+          <li class="border-r border-b border-line p-8 lg:p-10 reveal" style="--d:0.16s">
+            <span class="feature-icon"><svg aria-hidden="true"><use href="#i-compass"/></svg></span>
+            <h3 class="font-serif text-2xl font-semibold mt-6">Excursions guidées</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Fleuve Congo, chutes Wagenia, marchés : laissez-vous guider.</p>
+          </li>
+          <li class="border-r border-b border-line p-8 lg:p-10 reveal" style="--d:0.24s">
+            <span class="feature-icon"><svg aria-hidden="true"><use href="#i-key"/></svg></span>
+            <h3 class="font-serif text-2xl font-semibold mt-6">Majordome &amp; limousine</h3>
+            <p class="mt-2 text-sm text-muted leading-relaxed">Services personnalisés sur demande pour les suites.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-        <div>
-          <h5 class="font-bold mb-4">Contact</h5>
-          <div class="space-y-2 text-slate-300">
-            <p class="flex items-start gap-2">
-              <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
-              Avenue Kitima N°2, Kisangani
-            </p>
-            <p><a href="tel:+243820600712" class="hover:text-accent transition">+243 820600712</a></p>
-            <p><a href="mailto:reservation@glodi-vip.com" class="hover:text-accent transition">reservation@glodi-vip.com</a></p>
+    <!-- ===== EXPÉRIENCES ===== -->
+    <section id="experiences" class="section bg-subtle">
+      <div class="container-site">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Expériences</p>
+            <h2 class="section-title mt-5">Des moments <em>à garder en mémoire</em></h2>
+          </div>
+          <p class="text-muted max-w-md">Notre conciergerie organise vos réunions, vos instants de détente et vos découvertes de la région, sur simple demande.</p>
+        </div>
+        <div class="mt-14 grid md:grid-cols-3 gap-8">
+          <article class="card flex flex-col reveal" style="--d:0.0s">
+            <div class="media-zoom aspect-[4/3]"><img src="images/ext.jpg" alt="Jardin tropical de l'hôtel" width="2048" height="1364" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+            <div class="p-7 flex flex-col flex-1">
+              <h3 class="font-serif text-3xl font-medium">Détente &amp; jardins</h3>
+              <p class="mt-3 text-muted leading-relaxed flex-1">Respirez dans notre jardin tropical et nos terrasses ombragées. Massages signature sur réservation.</p>
+              <a href="#contact" class="link-arrow mt-5" data-book="Non précisé">Organiser <span class="sr-only">: Détente &amp; jardins</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="card flex flex-col reveal" style="--d:0.1s">
+            <div class="media-zoom aspect-[4/3]"><img src="apparts/bureauvip.jpg" alt="Espace de travail" width="2048" height="1364" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+            <div class="p-7 flex flex-col flex-1">
+              <h3 class="font-serif text-3xl font-medium">Business &amp; événements</h3>
+              <p class="mt-3 text-muted leading-relaxed flex-1">Salles de réunion équipées, service traiteur et Wi-Fi illimité pour vos séminaires et réceptions.</p>
+              <a href="#contact" class="link-arrow mt-5" data-book="Salle de réunion / événement">Organiser <span class="sr-only">: Business &amp; événements</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+          <article class="card flex flex-col reveal" style="--d:0.2s">
+            <div class="media-zoom aspect-[4/3]"><img src="apparts/panora2.jpg" alt="Vue panoramique sur Kisangani" width="2048" height="1364" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+            <div class="p-7 flex flex-col flex-1">
+              <h3 class="font-serif text-3xl font-medium">Découvrir Kisangani</h3>
+              <p class="mt-3 text-muted leading-relaxed flex-1">Le fleuve Congo, les chutes Wagenia, les marchés authentiques : notre conciergerie organise vos excursions.</p>
+              <a href="#contact" class="link-arrow mt-5" data-book="Non précisé">Organiser <span class="sr-only">: Découvrir Kisangani</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ESPACES PROFESSIONNELS ===== -->
+    <section id="entrepots" class="section">
+      <div class="container-site">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 reveal">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Glodi Business</p>
+            <h2 class="section-title mt-5">Entrepôts &amp; <em>espaces professionnels</em></h2>
+            <p class="lead mt-6">Des surfaces sécurisées et modulables, adaptées à vos besoins logistiques et commerciaux à Kisangani.</p>
+          </div>
+          <a href="https://wa.me/243824322239?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20un%20espace%20professionnel%20Glodi%20VIP." target="_blank" rel="noopener" class="btn btn-outline"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Demander un devis</a>
+        </div>
+        <div class="mt-14 grid md:grid-cols-3 gap-8">
+          <article class="card flex flex-col reveal" style="--d:0.0s">
+            <div class="media-zoom aspect-[16/10]"><img src="images/entrepot%20(1).jpg" alt="Entrepôt standard Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+            <div class="p-7 flex flex-col flex-1">
+              <h3 class="font-serif text-3xl font-medium">Entrepôt Standard</h3>
+              <p class="mt-3 text-muted leading-relaxed">Ventilation naturelle, accès poids lourds, sécurité 24/7 et parking privatif.</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="chip"><svg aria-hidden="true"><use href="#i-expand"/></svg>500 m²</span><span class="chip"><svg aria-hidden="true"><use href="#i-truck"/></svg>Poids lourds</span><span class="chip"><svg aria-hidden="true"><use href="#i-shield"/></svg>24/7</span></div>
+              <div class="mt-auto pt-6">
+                <div class="pt-6 border-t border-line flex flex-wrap items-center justify-between gap-4">
+                  <p><span class="price-label block">À partir de</span><span class="price-tag !text-[1.7rem]">500 $<small>/ mois</small></span></p>
+                  <a href="https://wa.me/243824322239?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20l%27Entrep%C3%B4t%20Standard%20%28500%20m%C2%B2%29%20de%20Glodi%20VIP." target="_blank" rel="noopener" class="btn btn-outline btn-sm"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Devis</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card flex flex-col reveal" style="--d:0.1s">
+            <div class="media-zoom aspect-[16/10]"><img src="images/entrepot1.jpg" alt="Entrepôt industriel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+            <div class="p-7 flex flex-col flex-1">
+              <h3 class="font-serif text-3xl font-medium">Entrepôt Industriel</h3>
+              <p class="mt-3 text-muted leading-relaxed">Grande hauteur sous plafond, isolation thermique et surveillance caméra HD.</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="chip"><svg aria-hidden="true"><use href="#i-expand"/></svg>1 200 m²</span><span class="chip"><svg aria-hidden="true"><use href="#i-camera"/></svg>Caméras HD</span><span class="chip"><svg aria-hidden="true"><use href="#i-warehouse"/></svg>Grande hauteur</span></div>
+              <div class="mt-auto pt-6">
+                <div class="pt-6 border-t border-line flex flex-wrap items-center justify-between gap-4">
+                  <p><span class="price-label block">À partir de</span><span class="price-tag !text-[1.7rem]">500 $<small>/ mois</small></span></p>
+                  <a href="https://wa.me/243824322239?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20l%27Entrep%C3%B4t%20Industriel%20%281%20200%20m%C2%B2%29%20de%20Glodi%20VIP." target="_blank" rel="noopener" class="btn btn-outline btn-sm"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Devis</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card flex flex-col reveal" style="--d:0.2s">
+            <div class="media-zoom aspect-[16/10]"><img src="images/entre.jpg" alt="Bâtiment commercial Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async" class="w-full h-full object-cover"></div>
+            <div class="p-7 flex flex-col flex-1">
+              <h3 class="font-serif text-3xl font-medium">Espace Modulable</h3>
+              <p class="mt-3 text-muted leading-relaxed">Surface flexible, bureaux intégrés et service de maintenance inclus.</p>
+              <div class="mt-5 flex flex-wrap gap-2"><span class="chip"><svg aria-hidden="true"><use href="#i-expand"/></svg>200–800 m²</span><span class="chip"><svg aria-hidden="true"><use href="#i-briefcase"/></svg>Bureaux</span><span class="chip"><svg aria-hidden="true"><use href="#i-key"/></svg>Maintenance</span></div>
+              <div class="mt-auto pt-6">
+                <div class="pt-6 border-t border-line flex flex-wrap items-center justify-between gap-4">
+                  <p><span class="price-label block">À partir de</span><span class="price-tag !text-[1.7rem]">500 $<small>/ mois</small></span></p>
+                  <a href="https://wa.me/243824322239?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20l%27Espace%20Modulable%20%28200%20%C3%A0%20800%20m%C2%B2%29%20de%20Glodi%20VIP." target="_blank" rel="noopener" class="btn btn-outline btn-sm"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>Devis</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALERIE ===== -->
+    <section id="galerie" class="section bg-subtle">
+      <div class="container-site">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 reveal">
+          <div class="max-w-2xl">
+            <p class="eyebrow">Galerie</p>
+            <h2 class="section-title mt-5">L'hôtel <em>en images</em></h2>
+          </div>
+          <div class="flex flex-wrap gap-2" data-gallery-filters="gallery-grid" role="group" aria-label="Filtrer les photos">
+            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">Tout</button>
+            <button type="button" class="filter-btn" data-filter="hotel" aria-pressed="false">L'hôtel</button>
+            <button type="button" class="filter-btn" data-filter="chambres" aria-pressed="false">Chambres</button>
+            <button type="button" class="filter-btn" data-filter="appartements" aria-pressed="false">Appartements</button>
+            <button type="button" class="filter-btn" data-filter="restaurant" aria-pressed="false">Restaurant</button>
           </div>
         </div>
+        <div id="gallery-grid" class="gallery-grid mt-12 reveal" style="grid-auto-flow: dense">
+          <button type="button" class="g-item wide tall" data-cat="hotel" data-lightbox="galerie" data-src="images/amb.jpg" data-caption="L'hôtel illuminé" aria-label="Agrandir : L'hôtel illuminé">
+            <img src="images/amb.jpg" alt="L'hôtel illuminé — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">L'hôtel illuminé</span>
+          </button>
+          <button type="button" class="g-item" data-cat="chambres" data-lightbox="galerie" data-src="images/executive.jpg" data-caption="Suite Exécutive" aria-label="Agrandir : Suite Exécutive">
+            <img src="images/executive.jpg" alt="Suite Exécutive — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Suite Exécutive</span>
+          </button>
+          <button type="button" class="g-item" data-cat="appartements" data-lightbox="galerie" data-src="apparts/deluxe2.jpg" data-caption="Salon de l'Appartement Deluxe" aria-label="Agrandir : Salon de l'Appartement Deluxe">
+            <img src="apparts/deluxe2.jpg" alt="Salon de l'Appartement Deluxe — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Salon de l'Appartement Deluxe</span>
+          </button>
+          <button type="button" class="g-item" data-cat="restaurant" data-lightbox="galerie" data-src="images/restaurant.jpg" data-caption="Restaurant" aria-label="Agrandir : Restaurant">
+            <img src="images/restaurant.jpg" alt="Restaurant — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Restaurant</span>
+          </button>
+          <button type="button" class="g-item" data-cat="appartements" data-lightbox="galerie" data-src="apparts/chambre1vip.jpg" data-caption="Chambre de l'Appartement VIP" aria-label="Agrandir : Chambre de l'Appartement VIP">
+            <img src="apparts/chambre1vip.jpg" alt="Chambre de l'Appartement VIP — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Chambre de l'Appartement VIP</span>
+          </button>
+          <button type="button" class="g-item wide" data-cat="hotel" data-lightbox="galerie" data-src="images/ext.jpg" data-caption="Jardin tropical" aria-label="Agrandir : Jardin tropical">
+            <img src="images/ext.jpg" alt="Jardin tropical — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Jardin tropical</span>
+          </button>
+          <button type="button" class="g-item" data-cat="chambres" data-lightbox="galerie" data-src="images/executive2.jpg" data-caption="Suite avec salon" aria-label="Agrandir : Suite avec salon">
+            <img src="images/executive2.jpg" alt="Suite avec salon — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Suite avec salon</span>
+          </button>
+          <button type="button" class="g-item" data-cat="restaurant" data-lightbox="galerie" data-src="images/amb1.jpg" data-caption="Salle d'accueil" aria-label="Agrandir : Salle d'accueil">
+            <img src="images/amb1.jpg" alt="Salle d'accueil — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Salle d'accueil</span>
+          </button>
+          <button type="button" class="g-item tall" data-cat="hotel" data-lightbox="galerie" data-src="images/facade.jpg" data-caption="Façade de l'hôtel" aria-label="Agrandir : Façade de l'hôtel">
+            <img src="images/facade.jpg" alt="Façade de l'hôtel — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Façade de l'hôtel</span>
+          </button>
+          <button type="button" class="g-item" data-cat="appartements" data-lightbox="galerie" data-src="apparts/deluxe.jpg" data-caption="Lustre en cristal" aria-label="Agrandir : Lustre en cristal">
+            <img src="apparts/deluxe.jpg" alt="Lustre en cristal — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Lustre en cristal</span>
+          </button>
+          <button type="button" class="g-item" data-cat="chambres" data-lightbox="galerie" data-src="images/classique3.jpg" data-caption="Galerie des chambres" aria-label="Agrandir : Galerie des chambres">
+            <img src="images/classique3.jpg" alt="Galerie des chambres — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Galerie des chambres</span>
+          </button>
+          <button type="button" class="g-item wide" data-cat="hotel" data-lightbox="galerie" data-src="apparts/panora.jpg" data-caption="Vue sur Kisangani" aria-label="Agrandir : Vue sur Kisangani">
+            <img src="apparts/panora.jpg" alt="Vue sur Kisangani — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Vue sur Kisangani</span>
+          </button>
+          <button type="button" class="g-item" data-cat="appartements" data-lightbox="galerie" data-src="apparts/appartvip.jpg" data-caption="Salon de l'Appartement VIP" aria-label="Agrandir : Salon de l'Appartement VIP">
+            <img src="apparts/appartvip.jpg" alt="Salon de l'Appartement VIP — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Salon de l'Appartement VIP</span>
+          </button>
+          <button type="button" class="g-item" data-cat="chambres" data-lightbox="galerie" data-src="apparts/lithote.jpg" data-caption="Chambre Familiale" aria-label="Agrandir : Chambre Familiale">
+            <img src="apparts/lithote.jpg" alt="Chambre Familiale — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Chambre Familiale</span>
+          </button>
+          <button type="button" class="g-item" data-cat="hotel" data-lightbox="galerie" data-src="images/ajout%20(1).jpg" data-caption="Couloirs" aria-label="Agrandir : Couloirs">
+            <img src="images/ajout%20(1).jpg" alt="Couloirs — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Couloirs</span>
+          </button>
+          <button type="button" class="g-item" data-cat="hotel" data-lightbox="galerie" data-src="images/executive4.jpg" data-caption="Détails de la réception" aria-label="Agrandir : Détails de la réception">
+            <img src="images/executive4.jpg" alt="Détails de la réception — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Détails de la réception</span>
+          </button>
+          <button type="button" class="g-item" data-cat="appartements" data-lightbox="galerie" data-src="apparts/douchevip.jpg" data-caption="Salle d'eau" aria-label="Agrandir : Salle d'eau">
+            <img src="apparts/douchevip.jpg" alt="Salle d'eau — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Salle d'eau</span>
+          </button>
+          <button type="button" class="g-item" data-cat="hotel" data-lightbox="galerie" data-src="images/executive5.jpg" data-caption="Accès et parking" aria-label="Agrandir : Accès et parking">
+            <img src="images/executive5.jpg" alt="Accès et parking — Hôtel Glodi VIP" width="2048" height="1364" loading="lazy" decoding="async">
+            <span class="g-cap" aria-hidden="true">Accès et parking</span>
+          </button>
+        </div>
+      </div>
+    </section>
 
-        <div>
-          <h5 class="font-bold mb-4">Navigation</h5>
-          <div class="space-y-2 text-slate-300">
-            <p><a href="#chambres" class="hover:text-accent transition">Chambres</a></p>
-            <p><a href="#restaurant" class="hover:text-accent transition">Restaurant</a></p>
-            <p><a href="#experiences" class="hover:text-accent transition">Expériences</a></p>
-            <p><a href="#contact" class="hover:text-accent transition">Contact</a></p>
+    <!-- ===== AVIS ===== -->
+    <section id="avis" class="section">
+      <div class="container-site">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <p class="eyebrow center">Témoignages</p>
+          <h2 class="section-title mt-5">Ils nous ont <em>fait confiance</em></h2>
+        </div>
+        <div class="mt-14 grid md:grid-cols-3 gap-8">
+          <figure class="card p-8 lg:p-10 flex flex-col reveal" style="--d:0.0s">
+            <div class="flex items-center justify-between">
+              <svg class="w-9 h-9 text-gold/40" aria-hidden="true"><use href="#i-quote"/></svg>
+              <span class="stars" role="img" aria-label="Note : 5 sur 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            </div>
+            <blockquote class="mt-6 font-serif text-[1.45rem] leading-snug flex-1">« Un service impeccable, des chambres magnifiques et une ambiance chaleureuse. C'est vraiment digne d'un établissement 5 étoiles ! »</blockquote>
+            <figcaption class="mt-8 pt-6 border-t border-line flex items-center gap-4">
+              <span class="w-12 h-12 rounded-full bg-gold-soft text-gold-ink font-semibold text-sm flex items-center justify-center" aria-hidden="true">MD</span>
+              <span><span class="block font-semibold">Marie Dupont</span><span class="block text-sm text-muted">Paris, France</span></span>
+            </figcaption>
+          </figure>
+          <figure class="card p-8 lg:p-10 flex flex-col reveal" style="--d:0.1s">
+            <div class="flex items-center justify-between">
+              <svg class="w-9 h-9 text-gold/40" aria-hidden="true"><use href="#i-quote"/></svg>
+              <span class="stars" role="img" aria-label="Note : 5 sur 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            </div>
+            <blockquote class="mt-6 font-serif text-[1.45rem] leading-snug flex-1">« L'hospitalité exceptionnelle, la cuisine raffinée et le confort : un séjour inoubliable au cœur de Kisangani ! »</blockquote>
+            <figcaption class="mt-8 pt-6 border-t border-line flex items-center gap-4">
+              <span class="w-12 h-12 rounded-full bg-gold-soft text-gold-ink font-semibold text-sm flex items-center justify-center" aria-hidden="true">AS</span>
+              <span><span class="block font-semibold">Ahmed Sall</span><span class="block text-sm text-muted">Kinshasa, RDC</span></span>
+            </figcaption>
+          </figure>
+          <figure class="card p-8 lg:p-10 flex flex-col reveal" style="--d:0.2s">
+            <div class="flex items-center justify-between">
+              <svg class="w-9 h-9 text-gold/40" aria-hidden="true"><use href="#i-quote"/></svg>
+              <span class="stars" role="img" aria-label="Note : 5 sur 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            </div>
+            <blockquote class="mt-6 font-serif text-[1.45rem] leading-snug flex-1">« Les meilleures installations que j'ai vues à Kisangani. Le personnel est attentionné et professionnel. Je reviendrai ! »</blockquote>
+            <figcaption class="mt-8 pt-6 border-t border-line flex items-center gap-4">
+              <span class="w-12 h-12 rounded-full bg-gold-soft text-gold-ink font-semibold text-sm flex items-center justify-center" aria-hidden="true">LC</span>
+              <span><span class="block font-semibold">Lisa Chen</span><span class="block text-sm text-muted">Singapour</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RÉSERVATION DIRECTE ===== -->
+    <section class="relative overflow-hidden bg-night on-dark" aria-labelledby="direct-title">
+      <img src="images/executive5.jpg" alt="" width="2048" height="1364" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#14110F] via-[#14110F]/85 to-[#14110F]/40"></div>
+      <div class="container-site relative py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <p class="eyebrow on-dark">Réservation directe</p>
+          <h2 id="direct-title" class="section-title mt-5 text-white">Réservez en direct, <em>profitez davantage</em></h2>
+          <div class="mt-9 flex flex-col sm:flex-row gap-3">
+            <a href="#contact" class="btn btn-gold">Demander une réservation</a>
+            <a href="https://wa.me/243820600712?text=Bonjour%20H%C3%B4tel%20Glodi%20VIP%2C%20je%20souhaite%20r%C3%A9server%20un%20s%C3%A9jour." target="_blank" rel="noopener" class="btn btn-light"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
           </div>
         </div>
+        <ul class="grid sm:grid-cols-2 gap-6 reveal" style="--d:.1s">
+          <li class="border border-white/15 p-6 bg-white/[0.03]"><svg class="w-7 h-7 text-[#E3C894]" aria-hidden="true"><use href="#i-award"/></svg><p class="mt-4 font-serif text-2xl text-white">Meilleur tarif garanti</p><p class="mt-2 text-sm text-white/65">Le prix le plus juste, sans intermédiaire.</p></li>
+          <li class="border border-white/15 p-6 bg-white/[0.03]"><svg class="w-7 h-7 text-[#E3C894]" aria-hidden="true"><use href="#i-whatsapp"/></svg><p class="mt-4 font-serif text-2xl text-white">Confirmation rapide</p><p class="mt-2 text-sm text-white/65">Une réponse personnalisée de notre réception.</p></li>
+          <li class="border border-white/15 p-6 bg-white/[0.03]"><svg class="w-7 h-7 text-[#E3C894]" aria-hidden="true"><use href="#i-calendar"/></svg><p class="mt-4 font-serif text-2xl text-white">Longs séjours</p><p class="mt-2 text-sm text-white/65">Forfaits mensuels pour nos appartements.</p></li>
+          <li class="border border-white/15 p-6 bg-white/[0.03]"><svg class="w-7 h-7 text-[#E3C894]" aria-hidden="true"><use href="#i-bell"/></svg><p class="mt-4 font-serif text-2xl text-white">Attentions sur mesure</p><p class="mt-2 text-sm text-white/65">Demandes spéciales préparées avant votre arrivée.</p></li>
+        </ul>
+      </div>
+    </section>
 
-        <div>
-          <h5 class="font-bold mb-4">Newsletter</h5>
-          <form id="newsletter-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-2">
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="section">
+      <div class="container-site grid lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-4 reveal">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2 class="section-title mt-5">Bon <em>à savoir</em></h2>
+          <p class="mt-6 text-muted">Vous ne trouvez pas votre réponse ? Notre réception vous répond à toute heure.</p>
+          <a href="tel:+243820600712" class="link-arrow mt-6">Appeler la réception <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="lg:col-span-8 faq border-t border-line reveal" style="--d:.1s">
+          <details open>
+            <summary>Comment réserver une chambre ou un appartement ?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Par WhatsApp, par téléphone au +243 820 600 712 ou via le formulaire de réservation de ce site. Notre réception vous confirme la disponibilité et le tarif très rapidement.</p>
+          </details>
+          <details>
+            <summary>Quels sont les horaires d'arrivée et de départ ?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Les chambres sont disponibles à partir de 14h le jour d'arrivée et doivent être libérées avant 12h le jour du départ. Une arrivée anticipée ou un départ tardif peuvent être accordés selon disponibilité.</p>
+          </details>
+          <details>
+            <summary>Proposez-vous des séjours longue durée ?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Oui. Nos appartements se louent à la nuit ou au mois : Studio Urbain dès 1 000 $/mois, Appartement VIP dès 1 500 $/mois et Appartement Deluxe dès 1 700 $/mois.</p>
+          </details>
+          <details>
+            <summary>Le Wi-Fi et le parking sont-ils inclus ?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Le Wi-Fi haut débit est inclus dans toutes nos chambres et nos appartements. Un parking privé et sécurisé est à la disposition de nos clients dans l'enceinte de l'hôtel.</p>
+          </details>
+          <details>
+            <summary>Peut-on organiser une réunion ou un événement ?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Bien sûr. Nos 8 salles de réception accueillent réunions, séminaires, conférences et célébrations, avec service traiteur sur demande. Contactez-nous pour un devis personnalisé.</p>
+          </details>
+          <details>
+            <summary>Où se trouve l'hôtel ?<span class="plus" aria-hidden="true"></span></summary>
+            <p>Avenue Kitima N°2, Quartier Plateau Boyoma, commune de Makiso, à Kisangani (Tshopo, RDC). Le plan d'accès est disponible en bas de cette page.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT & RÉSERVATION ===== -->
+    <section id="contact" class="section bg-subtle">
+      <div class="container-site">
+        <div class="max-w-3xl reveal">
+          <p class="eyebrow">Réservation &amp; contact</p>
+          <h2 class="section-title mt-5">Préparons <em>votre séjour</em></h2>
+          <p class="lead mt-6">Indiquez-nous vos dates et vos envies : notre équipe vous confirme la disponibilité et le tarif dans les plus brefs délais.</p>
+        </div>
+
+        <div class="mt-14 grid lg:grid-cols-12 gap-10">
+          <form id="reservation-form" action="https://api.web3forms.com/submit" method="POST" data-ajax novalidate
+                data-success="Merci ! Votre demande a bien été envoyée. Notre réception vous recontacte très rapidement."
+                class="lg:col-span-7 lg:self-start bg-surface border border-line p-6 sm:p-10 space-y-6 reveal">
             <input type="hidden" name="access_key" value="bfa99740-06cb-45d6-8583-201a7b0d8236">
-            <div class="flex gap-2">
-              <input type="email" name="Email" required placeholder="Votre email" class="flex-1 px-3 py-2 rounded-lg text-black placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent" />
-              <button type="submit" class="px-4 py-2 bg-accent text-black font-bold rounded-lg hover:bg-yellow-400 transition">OK</button>
+            <input type="hidden" name="subject" value="Nouvelle demande de réservation — site Glodi VIP">
+            <input type="hidden" name="from_name" value="Site Hôtel Glodi VIP">
+            <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div class="field">
+                <label for="f-name">Nom complet <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-name" type="text" name="Nom" required autocomplete="name" aria-describedby="f-name-err">
+                <p id="f-name-err" class="error">Indiquez votre nom.</p>
+              </div>
+              <div class="field">
+                <label for="f-email">E-mail <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-email" type="email" name="Email" required autocomplete="email" aria-describedby="f-email-err">
+                <p id="f-email-err" class="error">Saisissez une adresse e-mail valide.</p>
+              </div>
+              <div class="field">
+                <label for="f-phone">Téléphone / WhatsApp</label>
+                <input id="f-phone" type="tel" name="Téléphone" autocomplete="tel" inputmode="tel" placeholder="+243 …">
+              </div>
+              <div class="field">
+                <label for="f-stay">Hébergement souhaité</label>
+                <select id="f-stay" name="Hébergement">
+                  <option value="Non précisé">Je ne sais pas encore</option>
+                  <optgroup label="Chambres &amp; suites">
+                    <option>Chambre Classique</option>
+                    <option>Suite Exécutive</option>
+                    <option>Chambre Familiale</option>
+                  </optgroup>
+                  <optgroup label="Appartements">
+                    <option>Appartement VIP</option>
+                    <option>Appartement Deluxe</option>
+                    <option>Studio Urbain</option>
+                  </optgroup>
+                  <optgroup label="Autres demandes">
+                    <option>Table au restaurant</option>
+                    <option>Salle de réunion / événement</option>
+                    <option>Entrepôt / espace professionnel</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-in">Arrivée</label>
+                <input id="f-in" type="date" name="Arrivée" data-checkin="f-out">
+              </div>
+              <div class="field">
+                <label for="f-out">Départ</label>
+                <input id="f-out" type="date" name="Départ">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-msg">Votre message <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="f-msg" name="Message" required aria-describedby="f-msg-err" placeholder="Nombre de personnes, heure d'arrivée, demandes particulières…"></textarea>
+              <p id="f-msg-err" class="error">Écrivez-nous quelques mots.</p>
+            </div>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
+              <p class="text-xs text-muted">Les champs marqués <span class="text-gold-ink">*</span> sont obligatoires. Vos données servent uniquement à traiter votre demande.</p>
+              <button type="submit" class="btn btn-dark shrink-0">Envoyer ma demande <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
             </div>
           </form>
+
+          <div class="lg:col-span-5 space-y-6 reveal" style="--d:.1s">
+            <ul class="bg-surface border border-line divide-y divide-line">
+              <li class="p-6 flex gap-5">
+                <span class="feature-icon shrink-0"><svg aria-hidden="true"><use href="#i-bell"/></svg></span>
+                <div>
+                  <p class="font-semibold">Réception &amp; réservations</p>
+                  <p class="text-sm text-muted">Chambres, suites, restaurant — 24h/24</p>
+                  <div class="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-sm">
+                    <a href="tel:+243820600712" class="link-arrow !tracking-normal !normal-case !text-sm">+243 820 600 712</a>
+                    <a href="https://wa.me/243820600712" target="_blank" rel="noopener" class="link-arrow !tracking-normal !normal-case !text-sm">WhatsApp</a>
+                  </div>
+                </div>
+              </li>
+              <li class="p-6 flex gap-5">
+                <span class="feature-icon shrink-0"><svg aria-hidden="true"><use href="#i-building"/></svg></span>
+                <div>
+                  <p class="font-semibold">Appartements &amp; espaces pro</p>
+                  <p class="text-sm text-muted">Visites, locations longue durée, devis</p>
+                  <div class="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-sm">
+                    <a href="tel:+243824322239" class="link-arrow !tracking-normal !normal-case !text-sm">+243 824 322 239</a>
+                    <a href="https://wa.me/243824322239" target="_blank" rel="noopener" class="link-arrow !tracking-normal !normal-case !text-sm">WhatsApp</a>
+                  </div>
+                </div>
+              </li>
+              <li class="p-6 flex gap-5">
+                <span class="feature-icon shrink-0"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+                <div>
+                  <p class="font-semibold">E-mail</p>
+                  <a href="mailto:reservation@glodi-vip.com" class="link-arrow !tracking-normal !normal-case !text-sm">reservation@glodi-vip.com</a>
+                </div>
+              </li>
+              <li class="p-6 flex gap-5">
+                <span class="feature-icon shrink-0"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+                <div>
+                  <p class="font-semibold">Adresse</p>
+                  <p class="text-sm text-muted">Avenue Kitima N°2, Quartier Plateau Boyoma, Makiso, Kisangani — Tshopo, RDC</p>
+                  <a href="https://www.google.com/maps/search/?api=1&amp;query=0.5187829,25.1965631" target="_blank" rel="noopener" class="link-arrow">Itinéraire <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                </div>
+              </li>
+            </ul>
+            <div class="map-frame border border-line overflow-hidden h-[320px]">
+              <iframe title="Plan d'accès à l'Hôtel Glodi VIP" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d397.472941077995!2d25.2022827!3d0.5156370000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1757a0da420c661f%3A0x72ab9c1e0c9f1f7c!2sHotel%20Glody!5e0!3m2!1sfr!2scd!4v1732420000000"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIED DE PAGE ===== -->
+  <footer class="bg-night text-[#F3EEE6]/80 pt-20 pb-28 lg:pb-10">
+    <div class="container-site">
+      <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-12 pb-14 border-b border-white/10">
+        <div class="lg:col-span-4 space-y-5">
+          <a href="#top" class="flex items-center gap-3 text-white" aria-label="Hôtel Glodi VIP — accueil">
+            <svg class="brand-mark" aria-hidden="true"><use href="#i-logo"/></svg>
+            <span class="brand-name">Glodi VIP</span>
+          </a>
+          <p class="text-sm leading-relaxed max-w-sm">L'adresse de référence à Kisangani pour les voyageurs d'affaires, les familles et les séjours longue durée : chambres, suites, appartements et espaces professionnels.</p>
+          <div class="stars" aria-label="Hôtel 5 étoiles">
+            <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h2 class="font-sans text-[0.7rem] font-semibold tracking-[0.24em] uppercase text-[#E3C894] mb-5">Séjourner</h2>
+          <ul class="space-y-1 text-sm">
+            <li><a href="#chambres" class="inline-block py-1.5 hover:text-white transition-colors">Chambres &amp; suites</a></li>
+            <li><a href="pages/appartements1.html" class="inline-block py-1.5 hover:text-white transition-colors">Appartement VIP</a></li>
+            <li><a href="pages/appartements2.html" class="inline-block py-1.5 hover:text-white transition-colors">Appartement Deluxe</a></li>
+            <li><a href="pages/appartements3.html" class="inline-block py-1.5 hover:text-white transition-colors">Studio Urbain</a></li>
+            <li><a href="#entrepots" class="inline-block py-1.5 hover:text-white transition-colors">Espaces professionnels</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h2 class="font-sans text-[0.7rem] font-semibold tracking-[0.24em] uppercase text-[#E3C894] mb-5">Découvrir</h2>
+          <ul class="space-y-1 text-sm">
+            <li><a href="#restaurant" class="inline-block py-1.5 hover:text-white transition-colors">Restaurant &amp; bar</a></li>
+            <li><a href="#services" class="inline-block py-1.5 hover:text-white transition-colors">Services</a></li>
+            <li><a href="#experiences" class="inline-block py-1.5 hover:text-white transition-colors">Expériences</a></li>
+            <li><a href="#galerie" class="inline-block py-1.5 hover:text-white transition-colors">Galerie</a></li>
+            <li><a href="#faq" class="inline-block py-1.5 hover:text-white transition-colors">Questions fréquentes</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-4 space-y-6">
+          <div>
+            <h2 class="font-sans text-[0.7rem] font-semibold tracking-[0.24em] uppercase text-[#E3C894] mb-5">Contact</h2>
+            <ul class="space-y-3 text-sm">
+              <li class="flex gap-3"><svg class="w-4 h-4 mt-1 text-[#E3C894] shrink-0" aria-hidden="true"><use href="#i-pin"/></svg>Avenue Kitima N°2, Quartier Plateau Boyoma, Makiso, Kisangani — RDC</li>
+              <li class="flex gap-3"><svg class="w-4 h-4 mt-1 text-[#E3C894] shrink-0" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+243820600712" class="hover:text-white">+243 820 600 712</a></li>
+              <li class="flex gap-3"><svg class="w-4 h-4 mt-1 text-[#E3C894] shrink-0" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:reservation@glodi-vip.com" class="hover:text-white">reservation@glodi-vip.com</a></li>
+            </ul>
+          </div>
+          <form action="https://api.web3forms.com/submit" method="POST" data-ajax data-success="Merci ! Vous êtes inscrit(e) à notre lettre d'information." novalidate class="space-y-3">
+            <input type="hidden" name="access_key" value="bfa99740-06cb-45d6-8583-201a7b0d8236">
+            <input type="hidden" name="subject" value="Nouvelle inscription à la newsletter Glodi VIP">
+            <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+            <div class="field">
+              <label for="newsletter-email" class="!text-[#F3EEE6]/80">Offres &amp; actualités</label>
+              <div class="flex gap-2">
+                <input id="newsletter-email" type="email" name="Email" required autocomplete="email" placeholder="Votre adresse e-mail" class="!bg-white/5 !border-white/15 !text-white">
+                <button type="submit" class="btn btn-gold btn-sm shrink-0">S'inscrire</button>
+              </div>
+              <p class="error" role="alert">Saisissez une adresse e-mail valide.</p>
+            </div>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
 
-      <div class="border-t border-white/10 pt-8">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400 text-sm">
-          <p>© 2026 Hôtel Glodi VIP. Tous droits réservés.</p>
-          <p>Site conçu par <a href="https://davidwawina.site" target="_blank" class="text-accent hover:underline">David MBULA WAWINA</a></p>
-        </div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-xs text-[#F3EEE6]/55">
+        <p>© <span data-year>2026</span> Hôtel Glodi VIP — Kisangani. Tous droits réservés.</p>
+        <p>Site conçu par <a href="https://davidwawina.site" target="_blank" rel="noopener" class="text-[#E3C894] hover:underline underline-offset-4">David MBULA WAWINA</a></p>
       </div>
     </div>
   </footer>
 
-  <!-- === SCRIPTS === -->
-  <script>
-    // Scroll animations
-    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
+  <!-- Actions flottantes -->
+  <a href="https://wa.me/243820600712?text=Bonjour%20H%C3%B4tel%20Glodi%20VIP%2C%20je%20souhaite%20des%20informations." target="_blank" rel="noopener" class="float-wa" aria-label="Écrire à l'hôtel sur WhatsApp">
+    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+  <button type="button" class="to-top" aria-label="Revenir en haut de la page"><svg aria-hidden="true"><use href="#i-up"/></svg></button>
+  <div class="mobile-cta" aria-label="Réservation rapide">
+    <a href="tel:+243820600712" class="btn btn-outline btn-sm flex-1"><svg aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+    <a href="#contact" class="btn btn-gold btn-sm flex-1">Réserver</a>
+  </div>
 
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // Theme toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const root = document.documentElement;
-    const iconSun = document.getElementById('sunIcon') || document.getElementById('icon-sun');
-    const iconMoon = document.getElementById('moonIcon') || document.getElementById('icon-moon');
-
-    function setTheme(mode) {
-      const isDark = mode === 'dark';
-      root.classList.toggle('dark', isDark);
-
-      if (iconSun) {
-        iconSun.classList.toggle('hidden', isDark);
-      }
-      if (iconMoon) {
-        iconMoon.classList.toggle('hidden', !isDark);
-      }
-
-      localStorage.setItem('theme', mode);
-    }
-
-    if (themeToggle && !themeToggle.dataset.themeBound) {
-      themeToggle.dataset.themeBound = 'true';
-      themeToggle.addEventListener('click', () => {
-        setTheme(root.classList.contains('dark') ? 'light' : 'dark');
-      });
-    }
-
-    const savedTheme = localStorage.getItem('theme');
-    setTheme(savedTheme || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-
-    // Mobile menu
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn?.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.toggle('hidden');
-      menuBtn.setAttribute('aria-expanded', String(!isHidden));
-    });
-
-    // Contact form
-    document.getElementById('contact-form')?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const form = e.target;
-      const data = new FormData(form);
-      const json = JSON.stringify(Object.fromEntries(data));
-      
-      try {
-        const res = await fetch(form.action, { 
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: json 
-        });
-        if (res.ok) {
-          alert('✓ Message envoyé avec succès!');
-          form.reset();
-        }
-      } catch (err) {
-        alert('✗ Erreur lors de l\'envoi');
-      }
-    });
-  </script>
-  
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>
